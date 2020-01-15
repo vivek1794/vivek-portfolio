@@ -37,7 +37,7 @@ const AboutMe = () => {
   const classes = useStyles();
 
   return (
-    <Grid container className={classes.container}>
+    <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
         <Typography className={classes.title}>INTRO</Typography>
         <Typography className={classes.subtitle}>What I am all about</Typography>
