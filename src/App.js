@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, makeStyles } from '@material-ui/core';
-import Info from './components/info';
+import HomePage from './components/info/homepage';
+import AboutMe from './components/info/about-me';
 
 const useStyles = makeStyles({
 
@@ -11,7 +12,8 @@ const App = () => {
 
   return (
     <Grid container className={classes.container}>
-      <Info />
+      <HomePage />
+      <AboutMe />
     </Grid>
   );
 }

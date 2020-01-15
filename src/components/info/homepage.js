@@ -6,7 +6,7 @@ import {
   Avatar,
   makeStyles
 } from '@material-ui/core';
-import AvatarLogo from '../assets/avatar.jpg';
+import AvatarLogo from '../../assets/avatar.jpg';
 import SocialInfo from './social-info';
 import ContactInfo from './contact-info';
 
@@ -88,7 +88,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Info = () => {
+const HomePage = () => {
   const classes = useStyles();
 
   return (
@@ -101,7 +101,7 @@ const Info = () => {
       </Grid>
       <Grid item container xs={12} lg={8} className={classes.infoContainer}>
         
-        <Grid item container xs={12} lg={8} className={classes.contentContainer}>
+        <Grid item container xs={12} lg={10} className={classes.contentContainer}>
           <Typography className={classNames(classes.name,classes.firstName)}>
             Vivek
           </Typography>
@@ -120,7 +120,7 @@ const Info = () => {
           </Grid>
         </Grid>
 
-        <Grid item container className={classes.contactContainer}>
+        <Grid item container xs={12} lg={10} className={classes.contactContainer}>
           <ContactInfo />
         </Grid>
 
@@ -129,4 +129,4 @@ const Info = () => {
   );
 }
 
-export default Info;
+export default HomePage;
