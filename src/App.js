@@ -4,6 +4,7 @@ import { Grid, makeStyles } from '@material-ui/core';
 import HomePage from './components/info/homepage';
 import AboutMe from './components/info/about-me';
 import Skills from './components/skills/skills';
+import Experience from './components/experience/experience';
 
 const useStyles = makeStyles({
 
@@ -17,6 +18,7 @@ const App = () => {
       <HomePage />
       <AboutMe />
       <Skills />
+      <Experience />
     </Grid>
   );
 }
