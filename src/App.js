@@ -5,6 +5,7 @@ import HomePage from './components/info/homepage';
 import AboutMe from './components/info/about-me';
 import Skills from './components/skills/skills';
 import Experience from './components/experience/experience';
+import Education from './components/education.js/education';
 
 const useStyles = makeStyles({
 
@@ -19,6 +20,7 @@ const App = () => {
       <AboutMe />
       <Skills />
       <Experience />
+      <Education />
     </Grid>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import {
   Grid,
   Typography,
@@ -20,8 +21,14 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: '#404242',
     }
   },
+  timelineBottomAlign: {
+    '&:after': {
+      height: 'calc(100% - 6px)',
+      top: 6,
+    }
+  },
   itemContainer: {
-    padding: '0 24px 24px 24px',
+    padding: '0 24px 40px 24px',
     position: 'relative',
 
     '&:before': {
@@ -30,9 +37,21 @@ const useStyles = makeStyles(theme => ({
       borderRadius: '50%',
       height: '10px',
       width: '10px',
-      left: '-4px',
-      zIndex: '1',
+      left: -4,
+      zIndex: 1,
       backgroundColor: '#E0A80D',
+    },
+  },
+  itemContainerBottomAlign: {
+    '&:before': {
+      top: 6
+    }
+  },
+  itemContainerTopAlign: {
+    paddingTop: '40px',
+
+    '&:before': {
+      top: 46
     }
   },
   duration: {
@@ -49,14 +68,31 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     color: '#979899'
+  },
+  timelineEndMarker: {
+    position: 'relative',
+
+    '&:before': {
+      content: '" "',
+      position: 'absolute',
+      height: '2px',
+      width: '10px',
+      left: -4,
+      zIndex: 1,
+      backgroundColor: '#404242',
+    },
   }
 }));
 
-const Timeline = ({ items }) => {
+const Timeline = ({ items, align, isEnd }) => {
   const classes = useStyles();
+  const isBottomAlign = align === 'bottom';
 
   return (
-    <Grid className={classes.timeline}>
+    <Grid className={classNames(
+      classes.timeline,
+      { [classes.timelineBottomAlign]: isBottomAlign }
+    )}>
       {items.map(item => {
         const {
           title,
@@ -67,19 +103,31 @@ const Timeline = ({ items }) => {
         } = item;
 
         return (
-          <Grid item container className={classes.itemContainer} key={title}>
+          <Grid
+            item
+            container
+            key={title}
+            className={classNames(
+              classes.itemContainer,
+              isBottomAlign ? classes.itemContainerBottomAlign : classes.itemContainerTopAlign
+            )}
+          >
+
             <Grid item xs={12} md={6} className={classes.titleContainer}>
               <Typography className={classes.duration}>{duration}</Typography>
               <Typography className={classes.title}>{title}</Typography>
               <Typography className={classes.subtitle}>{subtitle}</Typography>
               <Typography className={classes.caption}>{caption}</Typography>
             </Grid>
+
             <Grid item xs={12} md={6} className={classes.contentContainer}>
               <Typography className={classes.content}>{content}</Typography>
             </Grid>
+
           </Grid>
         );
       })}
+      {isEnd && <Grid item className={classes.timelineEndMarker} />}
     </Grid>
   );
 }
