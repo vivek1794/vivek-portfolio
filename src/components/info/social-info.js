@@ -7,15 +7,15 @@ import {
   Twitter as TwitterIcon,
 } from '@material-ui/icons';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   iconContainer: {
     padding: '4px',
     cursor: 'pointer'
   },
   avatar: {
-    backgroundColor: '#3f4040'
+    backgroundColor: theme.palette.grey.medium,
   }
-});
+}));
 
 const SocialInfo = () => {
   const classes = useStyles();

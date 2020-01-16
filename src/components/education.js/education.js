@@ -8,7 +8,7 @@ import Timeline from '../common/timeline';
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
-    backgroundColor: '#2b2c2c',
+    backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(8)
   },
   title: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
-    backgroundColor: '#2d2e2e',
+    backgroundColor: theme.palette.grey.light,
     padding: theme.spacing(8),
     paddingTop: 0,
   },

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
       width: '2px',
       left: 0,
       bottom: 0,
-      backgroundColor: '#404242',
+      backgroundColor: theme.palette.grey.secondary,
     }
   },
   timelineBottomAlign: {
@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
       width: '10px',
       left: -4,
       zIndex: 1,
-      backgroundColor: '#E0A80D',
+      backgroundColor: theme.palette.yellow.main,
     },
   },
   itemContainerBottomAlign: {

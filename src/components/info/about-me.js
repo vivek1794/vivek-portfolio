@@ -7,7 +7,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
-    backgroundColor: '#292A2A',
+    backgroundColor: theme.palette.grey.dark,
     padding: theme.spacing(8)
   },
   title: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
-    backgroundColor: '#2B2C2C',
+    backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(8)
   },
   content: {

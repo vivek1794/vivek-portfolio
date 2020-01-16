@@ -18,8 +18,8 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#2b2c2c',
-    padding: '32px',
+    backgroundColor: theme.palette.grey.main,
+    padding: theme.spacing(4),
 
     [theme.breakpoints.up('lg')]: {
       justifyContent: 'flex-end',
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   infoContainer: {
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: '#2d2e2e',
+    backgroundColor: theme.palette.grey.light,
     position: 'relative'
   },
   avatar: {
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   contentContainer: {
     [theme.breakpoints.up('lg')]: {
-      padding: '4rem'
+      padding: theme.spacing(8)
     }
   },
   name: {
