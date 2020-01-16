@@ -6,6 +6,7 @@ import AboutMe from './components/info/about-me';
 import Skills from './components/skills/skills';
 import Experience from './components/experience/experience';
 import Education from './components/education.js/education';
+import Awards from './components/awards/awards';
 
 const useStyles = makeStyles({
 
@@ -21,6 +22,7 @@ const App = () => {
       <Skills />
       <Experience />
       <Education />
+      <Awards />
     </Grid>
   );
 }
