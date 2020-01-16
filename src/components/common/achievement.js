@@ -37,7 +37,7 @@ const Achievement = ({ items }) => {
         const { title, content } = item;
 
         return (
-          <Grid item container xs={12} sm={4} className={classes.itemContainer}>
+          <Grid item key={title} container xs={12} sm={4} className={classes.itemContainer}>
             <Grid item className={classes.headerContainer}>
               <Grid item className={classes.line} />
               <Typography className={classes.title}>{title}</Typography>

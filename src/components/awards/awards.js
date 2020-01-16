@@ -51,30 +51,6 @@ const Awards = () => {
       title: 'IBM certified Rational Application Developer - 2013',
       content: ''
     },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
-    {
-      title: 'Google certified Associate Android Developer',
-      content: ''
-    },
   ]
 
   return (
