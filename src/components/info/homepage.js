@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import {
   Grid,
   Typography,
@@ -41,20 +40,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   name: {
-    fontWeight: 300,
-    width: '100%',
-
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
     }
-  },
-  firstName: {
-    color: '#A4A5A6',
-    fontSize: '3rem'
-  },
-  lastName: {
-    color: '#E0A80D',
-    fontSize: '4rem'
   },
   socialIconContainer: {
     display: 'flex',
@@ -71,8 +59,6 @@ const useStyles = makeStyles(theme => ({
     }
   },
   aboutMe: {
-    color: '#979899',
-
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
       padding: '16px'
@@ -102,15 +88,15 @@ const HomePage = () => {
       <Grid item container xs={12} lg={8} className={classes.infoContainer}>
         
         <Grid item container xs={12} lg={10} className={classes.contentContainer}>
-          <Typography className={classNames(classes.name,classes.firstName)}>
+          <Typography variant="h2" className={classes.name}>
             Vivek
           </Typography>
-          <Typography className={classNames(classes.name,classes.lastName)}>
+          <Typography variant="h1" className={classes.name}>
             Chanddru
           </Typography>
           <Grid item container justify="space-between" alignItems="center">
             <Grid item className={classes.aboutMeContainer}>
-              <Typography className={classes.aboutMe}>
+              <Typography variant="subtitle1" className={classes.aboutMe}>
                 Android developer
               </Typography>
             </Grid>

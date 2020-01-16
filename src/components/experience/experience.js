@@ -11,16 +11,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey.dark,
     padding: theme.spacing(8),
   },
-  title: {
-    color: '#A4A5A6',
-
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'right'
-    }
-  },
-  subtitle: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.up('lg')]: {
       textAlign: 'right'
     }
@@ -78,8 +69,8 @@ const Experience = () => {
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography className={classes.title}>EXPERIENCE</Typography>
-        <Typography className={classes.subtitle}>Yes. I've been around</Typography>
+        <Typography variant="h3" className={classes.align}>EXPERIENCE</Typography>
+        <Typography variant="h6" className={classes.align}>Yes. I've been around</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>

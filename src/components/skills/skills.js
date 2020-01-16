@@ -11,16 +11,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#2b2c2c',
     padding: theme.spacing(8)
   },
-  title: {
-    color: '#A4A5A6',
-
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'right'
-    }
-  },
-  subtitle: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.up('lg')]: {
       textAlign: 'right'
     }
@@ -41,8 +32,8 @@ const Skills = () => {
     <Grid container>
 
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography className={classes.title}>Skills</Typography>
-        <Typography className={classes.subtitle}>Progress bars, anyone?</Typography>
+        <Typography variant="h3" className={classes.align}>Skills</Typography>
+        <Typography variant="h6" className={classes.align}>Progress bars, anyone?</Typography>
       </Grid>
 
       <Grid item container xs={12} lg={8} className={classes.contentContainer}>

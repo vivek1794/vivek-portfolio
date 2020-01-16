@@ -1,22 +1,8 @@
 import React, { Fragment } from 'react';
-import {
-  Grid,
-  makeStyles,
-  Typography
-} from '@material-ui/core';
+import { Grid, makeStyles, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    color: '#A4A5A6',
-    fontWeight: 600,
-
-    [theme.breakpoints.down('md')]: {
-      textAlign: 'center',
-    }
-  },
-  content: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.down('md')]: {
       textAlign: 'center',
     }
@@ -35,22 +21,22 @@ const ContactInfo = () => {
     <Fragment>
       <Grid item container xs={12} lg={6}>
         <Grid item xs={12} sm={6} className={classes.contact}>
-          <Typography className={classes.title}>Location</Typography>
-          <Typography className={classes.content}>Victoria, CA</Typography>
+          <Typography variant="h5" className={classes.align}>Location</Typography>
+          <Typography variant="h6" className={classes.align}>Victoria, CA</Typography>
         </Grid>
         <Grid item xs={12} sm={6} className={classes.contact}>
-          <Typography className={classes.title}>Phone</Typography>
-          <Typography className={classes.content}>236.464.4566</Typography>
+          <Typography variant="h5" className={classes.align}>Phone</Typography>
+          <Typography variant="h6" className={classes.align}>236.464.4566</Typography>
         </Grid>
       </Grid>
       <Grid item container xs={12} lg={6}>
         <Grid item xs={12} sm={6} className={classes.contact}>
-          <Typography className={classes.title}>Web</Typography>
-          <Typography className={classes.content}>example.com</Typography>
+          <Typography variant="h5" className={classes.align}>Web</Typography>
+          <Typography variant="h6" className={classes.align}>example.com</Typography>
         </Grid>
         <Grid item xs={12} sm={6} className={classes.contact}>
-          <Typography className={classes.title}>Email</Typography>
-          <Typography className={classes.content}>vivek@freshworks.io</Typography>
+          <Typography variant="h5" className={classes.align}>Email</Typography>
+          <Typography variant="h6" className={classes.align}>vivek@freshworks.io</Typography>
         </Grid>
       </Grid>
     </Fragment>

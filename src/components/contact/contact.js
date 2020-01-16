@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import {
   Grid,
   Typography,
@@ -15,16 +14,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(8)
   },
-  title: {
-    color: '#A4A5A6',
-
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'right'
-    }
-  },
-  subtitle: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.up('lg')]: {
       textAlign: 'right'
     }
@@ -53,14 +43,6 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'center',
     }
   },
-  firstName: {
-    color: '#A4A5A6',
-    fontSize: '2rem'
-  },
-  lastName: {
-    color: '#E0A80D',
-    fontSize: '2rem'
-  },
   socialIconContainer: {
     display: 'flex'
   },
@@ -72,8 +54,8 @@ const Contact = () => {
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography className={classes.title}>Contact</Typography>
-        <Typography className={classes.subtitle}>Call me, maybe.</Typography>
+        <Typography variant="h3" className={classes.align}>Contact</Typography>
+        <Typography variant="h6" className={classes.align}>Call me, maybe.</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>
@@ -83,10 +65,10 @@ const Contact = () => {
         <Grid item container xs={12} lg={10}>
           <Grid item container className={classes.aboutMeContainer}>
             <Grid item>
-              <Typography className={classNames(classes.name,classes.firstName)}>
+              <Typography variant="h2" className={classes.name}>
                 Vivek
               </Typography>
-              <Typography className={classNames(classes.name,classes.lastName)}>
+              <Typography variant="h1" className={classes.name}>
                 Chanddru
               </Typography>
             </Grid>

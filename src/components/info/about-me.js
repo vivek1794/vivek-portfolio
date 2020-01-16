@@ -10,16 +10,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey.dark,
     padding: theme.spacing(8)
   },
-  title: {
-    color: '#A4A5A6',
-
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'right'
-    }
-  },
-  subtitle: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.up('lg')]: {
       textAlign: 'right'
     }
@@ -28,9 +19,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(8)
   },
-  content: {
-    color: '#979899'
-  }
 }));
 
 const AboutMe = () => {
@@ -39,12 +27,12 @@ const AboutMe = () => {
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography className={classes.title}>INTRO</Typography>
-        <Typography className={classes.subtitle}>What I am all about</Typography>
+        <Typography variant="h3" className={classes.align}>INTRO</Typography>
+        <Typography variant="h6" className={classes.align}>What I am all about</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>
-          <Typography className={classes.content}>
+          <Typography variant="body1">
             {"Android developer and fanboy from Chennai, India. Loves to be caught \
               up with the latest gadgets and developments in Android arena. Dabbles\
               a bit with IoT and Web development when there is free time. Loves to \

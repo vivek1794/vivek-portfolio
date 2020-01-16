@@ -20,12 +20,6 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#E0A80D',
     marginBottom: theme.spacing(1)
   },
-  title: {
-    color: '#A4A5A6'
-  },
-  content: {
-    color: '#979899'
-  }
 }));
 
 const Achievement = ({ items }) => {
@@ -40,9 +34,9 @@ const Achievement = ({ items }) => {
           <Grid item key={title} container xs={12} sm={4} className={classes.itemContainer}>
             <Grid item className={classes.headerContainer}>
               <Grid item className={classes.line} />
-              <Typography className={classes.title}>{title}</Typography>
+              <Typography variant="h5">{title}</Typography>
             </Grid>
-            <Typography className={classes.content}>{content}</Typography>
+            <Typography variant="body1">{content}</Typography>
           </Grid>
         );
       })}

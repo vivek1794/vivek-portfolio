@@ -11,16 +11,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(8)
   },
-  title: {
-    color: '#A4A5A6',
-
-    [theme.breakpoints.up('lg')]: {
-      textAlign: 'right'
-    }
-  },
-  subtitle: {
-    color: '#979899',
-
+  align: {
     [theme.breakpoints.up('lg')]: {
       textAlign: 'right'
     }
@@ -30,9 +21,6 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(8),
     paddingTop: 0,
   },
-  content: {
-    color: '#979899'
-  }
 }));
 
 const Education = () => {
@@ -61,8 +49,8 @@ const Education = () => {
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography className={classes.title}>EDUCATION</Typography>
-        <Typography className={classes.subtitle}>Lazy isn't in my vocabulary.</Typography>
+        <Typography variant="h3" className={classes.align}>EDUCATION</Typography>
+        <Typography variant="h6" className={classes.align}>Lazy isn't in my vocabulary.</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>

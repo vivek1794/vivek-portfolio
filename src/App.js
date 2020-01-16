@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, ThemeProvider } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core';
 
 import { theme } from './theme/theme';
 
@@ -13,15 +13,13 @@ import Contact from './components/contact/contact';
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <Grid container>
-      <HomePage />
-      <AboutMe />
-      <Skills />
-      <Experience />
-      <Education />
-      <Awards />
-      <Contact />
-    </Grid>
+    <HomePage />
+    <AboutMe />
+    <Skills />
+    <Experience />
+    <Education />
+    <Awards />
+    <Contact />
   </ThemeProvider>
 );
 

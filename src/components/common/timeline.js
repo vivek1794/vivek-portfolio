@@ -54,18 +54,6 @@ const useStyles = makeStyles(theme => ({
       top: 46
     }
   },
-  duration: {
-    color: '#979899'
-  },
-  title: {
-    color: '#A4A5A6'
-  },
-  subtitle: {
-    color: '#A4A5A6'
-  },
-  caption: {
-    color: '#979899'
-  },
   content: {
     color: '#979899'
   },
@@ -114,14 +102,14 @@ const Timeline = ({ items, align, isEnd }) => {
           >
 
             <Grid item xs={12} md={6} className={classes.titleContainer}>
-              <Typography className={classes.duration}>{duration}</Typography>
-              <Typography className={classes.title}>{title}</Typography>
-              <Typography className={classes.subtitle}>{subtitle}</Typography>
-              <Typography className={classes.caption}>{caption}</Typography>
+              <Typography variant="caption">{duration}</Typography>
+              <Typography variant="h3">{title}</Typography>
+              <Typography variant="subtitle2">{subtitle}</Typography>
+              <Typography variant="caption">{caption}</Typography>
             </Grid>
 
             <Grid item xs={12} md={6} className={classes.contentContainer}>
-              <Typography className={classes.content}>{content}</Typography>
+              <Typography variant="body1">{content}</Typography>
             </Grid>
 
           </Grid>
