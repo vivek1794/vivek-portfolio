@@ -20,22 +20,32 @@ const useStyles = makeStyles(theme => ({
 const SocialInfo = () => {
   const classes = useStyles();
 
+  const facebookLink = 'https://fb.com/vivek1794';
+  const linkedInLink = 'https://www.linkedin.com/in/vivek1794/';
+  const twitterLink = 'https://twitter.com/Vivek_chanddru';
+
   return (
     <Fragment>
       <Grid item className={classes.iconContainer}>
-        <Avatar variant="rounded" className={classes.avatar}>
-          <FacebookIcon />
-        </Avatar>
+        <a href={facebookLink} target="_blank" rel="noopener noreferrer">
+          <Avatar variant="rounded" className={classes.avatar}>
+            <FacebookIcon />
+          </Avatar>
+        </a>
       </Grid>
       <Grid item className={classes.iconContainer}>
-        <Avatar variant="rounded" className={classes.avatar}>
-          <LinkedInIcon />
-        </Avatar>
+        <a href={linkedInLink} target="_blank" rel="noopener noreferrer">
+          <Avatar variant="rounded" className={classes.avatar}>
+            <LinkedInIcon />
+          </Avatar>
+        </a>
       </Grid>
       <Grid item className={classes.iconContainer}>
-        <Avatar variant="rounded" className={classes.avatar}>
-          <TwitterIcon />
-        </Avatar>
+        <a href={twitterLink} target="_blank" rel="noopener noreferrer">
+          <Avatar variant="rounded" className={classes.avatar}>
+            <TwitterIcon />
+          </Avatar>
+        </a>
       </Grid>
     </Fragment>
   );
