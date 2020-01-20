@@ -4,6 +4,7 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core';
+import { aboutMeInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
@@ -23,20 +24,18 @@ const useStyles = makeStyles(theme => ({
 
 const AboutMe = () => {
   const classes = useStyles();
+  const { title, subtitle, content } = aboutMeInfo;
 
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography variant="h3" className={classes.align}>INTRO</Typography>
-        <Typography variant="h6" className={classes.align}>What I am all about</Typography>
+        <Typography variant="h3" className={classes.align}>{title}</Typography>
+        <Typography variant="h6" className={classes.align}>{subtitle}</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>
           <Typography variant="body1">
-            {"Android developer and fanboy from Chennai, India. Loves to be caught \
-              up with the latest gadgets and developments in Android arena. Dabbles\
-              a bit with IoT and Web development when there is free time. Loves to \
-              play with <div>s when I am not playing with the <ConstraintLayout>"}
+            {content}
           </Typography>
         </Grid>
       </Grid>

@@ -8,6 +8,7 @@ import {
 
 import ContactInfo from '../info/contact-info';
 import SocialInfo from '../info/social-info';
+import { myInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
@@ -50,6 +51,7 @@ const useStyles = makeStyles(theme => ({
 
 const Contact = () => {
   const classes = useStyles();
+  const { firstName, lastName } = myInfo;
 
   return (
     <Grid container>
@@ -66,10 +68,10 @@ const Contact = () => {
           <Grid item container className={classes.aboutMeContainer}>
             <Grid item>
               <Typography variant="h2" className={classes.name}>
-                Vivek
+                {firstName}
               </Typography>
               <Typography variant="h1" className={classes.name}>
-                Chanddru
+                {lastName}
               </Typography>
             </Grid>
             <Grid item className={classes.socialIconContainer}>

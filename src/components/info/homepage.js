@@ -8,6 +8,7 @@ import {
 import AvatarLogo from '../../assets/avatar.jpg';
 import SocialInfo from './social-info';
 import ContactInfo from './contact-info';
+import { myInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -76,6 +77,7 @@ const useStyles = makeStyles(theme => ({
 
 const HomePage = () => {
   const classes = useStyles();
+  const { firstName, lastName, role } = myInfo;
 
   return (
     <Grid item container className={classes.container}>
@@ -89,15 +91,15 @@ const HomePage = () => {
         
         <Grid item container xs={12} lg={10} className={classes.contentContainer}>
           <Typography variant="h2" className={classes.name}>
-            Vivek
+            {firstName}
           </Typography>
           <Typography variant="h1" className={classes.name}>
-            Chanddru
+            {lastName}
           </Typography>
           <Grid item container justify="space-between" alignItems="center">
             <Grid item className={classes.aboutMeContainer}>
               <Typography variant="subtitle1" className={classes.aboutMe}>
-                Android developer
+                {role}
               </Typography>
             </Grid>
             <Grid item className={classes.socialIconContainer}>

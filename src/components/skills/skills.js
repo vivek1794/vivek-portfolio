@@ -5,6 +5,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import ProgressBar from '../common/progress-bar';
+import { skillInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
@@ -27,37 +28,22 @@ const useStyles = makeStyles(theme => ({
 
 const Skills = () => {
   const classes = useStyles();
+  const { title, subtitle, skills } = skillInfo;
 
   return (
     <Grid container>
 
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography variant="h3" className={classes.align}>Skills</Typography>
-        <Typography variant="h6" className={classes.align}>Progress bars, anyone?</Typography>
+        <Typography variant="h3" className={classes.align}>{title}</Typography>
+        <Typography variant="h6" className={classes.align}>{subtitle}</Typography>
       </Grid>
 
       <Grid item container xs={12} lg={8} className={classes.contentContainer}>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="Java" value={90} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="Android" value={95} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="Kotlin" value={80} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="Rx" value={75} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="HTML" value={85} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="PHP" value={65} />
-        </Grid>
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
-          <ProgressBar name="CI/CD" value={75} />
-        </Grid>
+        {skills.map(skill => (
+          <Grid item xs={12} sm={6} className={classes.skillContainer}>
+            <ProgressBar name={skill.title} value={skill.value} />
+          </Grid>
+        ))}
       </Grid>
 
     </Grid>

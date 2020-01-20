@@ -5,6 +5,7 @@ import {
   makeStyles
 } from '@material-ui/core';
 import Timeline from '../common/timeline';
+import { educationInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
@@ -25,32 +26,13 @@ const useStyles = makeStyles(theme => ({
 
 const Education = () => {
   const classes = useStyles();
-
-  const educations = [
-    {
-      title: 'Anna University',
-      subtitle: 'Bachelor of computer science',
-      caption: 'Chennai, IN',
-      duration: '2011 - 2015',
-      content: `Worked as Android developer for entire Zoho Assist suite of apps.
-                Responsible for managing the Android and iOS app development
-                schedule and the single point of contact for the mobile team.
-                Managed a team of 4 developers to see the product to launch.
-                Came up with some ideas and introduced new apps to the Zoho
-                Assist suite.
-                Responsible for communicating the requirements to the designers
-                and the marketing team.
-                Responsible for taking all technological decisions on the mobile
-                app development for Android and iOS.
-      `
-    },
-  ]
+  const { title, subtitle, educations } = educationInfo;
 
   return (
     <Grid container>
       <Grid item xs={12} lg={4} className={classes.introContainer}>
-        <Typography variant="h3" className={classes.align}>EDUCATION</Typography>
-        <Typography variant="h6" className={classes.align}>Lazy isn't in my vocabulary.</Typography>
+        <Typography variant="h3" className={classes.align}>{title}</Typography>
+        <Typography variant="h6" className={classes.align}>{subtitle}</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classes.contentContainer}>
         <Grid item container xs={12} lg={10}>

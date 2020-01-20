@@ -6,6 +6,7 @@ import {
   LinkedIn as LinkedInIcon,
   Twitter as TwitterIcon,
 } from '@material-ui/icons';
+import { socialLinksInfo } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
   iconContainer: {
@@ -19,29 +20,26 @@ const useStyles = makeStyles(theme => ({
 
 const SocialInfo = () => {
   const classes = useStyles();
-
-  const facebookLink = 'https://fb.com/vivek1794';
-  const linkedInLink = 'https://www.linkedin.com/in/vivek1794/';
-  const twitterLink = 'https://twitter.com/Vivek_chanddru';
+  const { facebook, linkedIn, twitter } = socialLinksInfo;
 
   return (
     <Fragment>
       <Grid item className={classes.iconContainer}>
-        <a href={facebookLink} target="_blank" rel="noopener noreferrer">
+        <a href={facebook} target="_blank" rel="noopener noreferrer">
           <Avatar variant="rounded" className={classes.avatar}>
             <FacebookIcon />
           </Avatar>
         </a>
       </Grid>
       <Grid item className={classes.iconContainer}>
-        <a href={linkedInLink} target="_blank" rel="noopener noreferrer">
+        <a href={linkedIn} target="_blank" rel="noopener noreferrer">
           <Avatar variant="rounded" className={classes.avatar}>
             <LinkedInIcon />
           </Avatar>
         </a>
       </Grid>
       <Grid item className={classes.iconContainer}>
-        <a href={twitterLink} target="_blank" rel="noopener noreferrer">
+        <a href={twitter} target="_blank" rel="noopener noreferrer">
           <Avatar variant="rounded" className={classes.avatar}>
             <TwitterIcon />
           </Avatar>
