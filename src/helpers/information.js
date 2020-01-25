@@ -98,6 +98,10 @@ export const experienceInfo = {
                 and the marketing team.
                 Responsible for taking all technological decisions on the mobile
                 app development for Android and iOS.
+      `,
+      shortContent: `Worked as Android developer for entire Zoho Assist suite of apps.
+                     Responsible for managing the Android and iOS app development
+                     schedule and the single point of contact for the mobile team.
       `
     },
     {
@@ -115,6 +119,10 @@ export const experienceInfo = {
                 and the marketing team.
                 Responsible for taking all technological decisions on the mobile
                 app development for Android and iOS.
+      `,
+      shortContent: `Worked as Android developer for entire Zoho Assist suite of apps.
+                     Responsible for managing the Android and iOS app development
+                     schedule and the single point of contact for the mobile team.
       `
     },
   ]
@@ -139,6 +147,10 @@ export const educationInfo = {
                 and the marketing team.
                 Responsible for taking all technological decisions on the mobile
                 app development for Android and iOS.
+      `,
+      shortContent: `Worked as Android developer for entire Zoho Assist suite of apps.
+                     Responsible for managing the Android and iOS app development
+                     schedule and the single point of contact for the mobile team.
       `
     },
   ]
