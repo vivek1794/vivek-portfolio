@@ -3,7 +3,6 @@ import {
   Grid,
   Typography,
   makeStyles,
-  Divider,
   List,
   ListItem,
   ListItemIcon,
@@ -25,11 +24,21 @@ import ProgressBar from '../common/progress-bar';
 const useStyles = makeStyles(theme => ({
   container: {
     padding: theme.spacing(4),
-    // display: 'none',
+    display: 'none',
 
     '@media print': {
       display: 'flex'
     }
+  },
+  contentContainer: {
+    borderTop: `1px solid ${theme.palette.grey.light}`
+  },
+  aboutContainer: {
+    borderRight: `1px solid ${theme.palette.grey.light}`,
+    padding: '16px 0'
+  },
+  infoContainer: {
+    padding: theme.spacing(2)
   },
   divider: {
     marginTop: theme.spacing(1),
@@ -39,9 +48,6 @@ const useStyles = makeStyles(theme => ({
   },
   section: {
     padding: '8px 0'
-  },
-  item: {
-    padding: '4px 0'
   },
   noSpace: {
     margin: 0,
@@ -62,89 +68,111 @@ const PrintPage = () => {
   return (
     <Grid container className={classes.container}>
 
-      <Grid item container justify="space-between">
+      <Grid item container className={classes.section}>
         <Grid item>
-          <Typography variant="h3">{firstName} {lastName}</Typography>
-          <Typography variant="subtitle2">{location.value}</Typography>
-          <Typography variant="subtitle2">{phone.displayName}</Typography>
-        </Grid>
-        <Grid item>
-          <Typography align="right" variant="h3">{role}</Typography>
-          <Typography align="right" variant="subtitle2">{website.displayName}</Typography>
-          <Typography align="right" variant="subtitle2">{email.value}</Typography>
+          <Typography variant="h2">{firstName} {lastName}</Typography>
+          <Typography variant="h3">{role}</Typography>
         </Grid>
       </Grid>
 
-      <Grid item container>
-        <Divider light classes={{ root: classes.divider }} />
-      </Grid>
+      <Grid item container className={classes.contentContainer}>
 
-      <Grid item container className={classes.section}>
-        <Typography variant="h3">Skills</Typography>
-        <Grid item container>
-          {skills.map(skill => (
-            <Grid item key={skill.title} xs={6} className={classes.section}>
-              <ProgressBar name={skill.title} value={skill.value} />
+        <Grid item container xs={4} direction="column" className={classes.aboutContainer}>
+          <Grid item className={classes.section}>
+            <Typography variant="h3">Info</Typography>
+            <Grid item container direction="column" className={classes.section}>
+              <Grid item>
+                <Typography variant="h5">Address</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{location.value}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="h5">Phone</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{phone.displayName}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="h5">Email</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{email.value}</Typography>
+              </Grid>
+              <Grid item>
+                <Typography variant="h5">Website</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{website.displayName}</Typography>
+              </Grid>
             </Grid>
-          ))}
-        </Grid>
-      </Grid>
+          </Grid>
 
-      <Grid item container className={classes.section}>
-        <Typography variant="h3">Experiences</Typography>
-        {experiences.map(experience => {
-          const { title, subtitle, caption, duration, shortContent } = experience;
+          <Grid item className={classes.section}>
+            <Typography variant="h3">Skills</Typography>
+            {skills.map(skill => (
+              <Grid item key={skill.title} className={classes.section}>
+                <ProgressBar name={skill.title} value={skill.value} />
+              </Grid>
+            ))}
+          </Grid>
 
-          return (
-            <Grid item key={title} xs={12} className={classes.section}>
-              <Typography variant="h5">{subtitle}</Typography>
-              <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
-              <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
-              <Typography variant="body1">{shortContent}</Typography>
-            </Grid>
-          );
-        })}
-      </Grid>
-
-      <Grid item container className={classes.section}>
-        <Typography variant="h3">Education</Typography>
-        {educations.map(experience => {
-          const { title, subtitle, caption, duration, shortContent } = experience;
-
-          return (
-            <Grid item key={title} xs={12} className={classes.section}>
-              <Typography variant="h5">{subtitle}</Typography>
-              <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
-              <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
-              <Typography variant="body1">{shortContent}</Typography>
-            </Grid>
-          );
-        })}
-      </Grid>
-
-      <Grid item container className={classes.section}>
-        <Typography variant="h3">Awards and Achievements</Typography>
-        <Grid item xs={12}>
-          <List disablePadding>
-            {awards.map(award => {
-              const { title, content } = award;
+          <Grid item className={classes.section}>
+            <Typography variant="h3">Education</Typography>
+            {educations.map(education => {
+              const { title, subtitle, caption, duration } = education;
 
               return (
-                <ListItem classes={{ root: classes.item }} key={title}>
-                  <ListItemIcon>
-                    <StarsIcon />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={title}
-                    secondary={content || null}
-                  />
-                </ListItem>
+              <Grid item key={title} className={classes.section}>
+                <Typography variant="h5">{subtitle}</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
+              </Grid>
               );
             })}
-          </List>
+          </Grid>
         </Grid>
-      </Grid>
 
+        <Grid item container xs={8} direction="column" className={classes.infoContainer}>
+
+          <Grid item container className={classes.section}>
+            <Typography variant="h3">Experiences</Typography>
+            <Grid item container direction="column" className={classes.section}>
+              {experiences.map(experience => {
+                const { title, subtitle, caption, duration, shortContent } = experience;
+
+                return (
+                  <Grid item key={title}>
+                    <Grid item container justify="space-between">
+                      <Typography variant="h5">{subtitle}</Typography>
+                      <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
+                    </Grid>       
+                    <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
+                    <Typography variant="body1">{shortContent}</Typography>
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </Grid>
+          
+          <Grid item container className={classes.section}>
+            <Typography variant="h3">Awards and Achievements</Typography>
+            <Grid item xs={12}>
+              <List disablePadding>
+                {awards.map(award => {
+                  const { title, content } = award;
+
+                  return (
+                    <ListItem classes={{ root: classes.noSpace }} key={title}>
+                      <ListItemIcon>
+                        <StarsIcon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={title}
+                        secondary={content || null}
+                      />
+                    </ListItem>
+                  );
+                })}
+              </List>
+            </Grid>
+          </Grid>
+
+        </Grid>
+
+      </Grid>
     </Grid>
   );
 }

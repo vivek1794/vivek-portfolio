@@ -14,13 +14,13 @@ import PrintPage from './components/print/print-page';
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    {/* <HomePage />
+    <HomePage />
     <AboutMe />
     <Skills />
     <Experience />
     <Education />
     <Awards />
-    <Contact /> */}
+    <Contact />
     <PrintPage />
   </ThemeProvider>
 );
