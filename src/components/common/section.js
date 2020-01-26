@@ -53,7 +53,7 @@ const Section = ({
   return (
     <Grid container className={classes.container}>
       <Grid item xs={12} lg={4} className={classNames(classes.content, classes.sectionContainer)}>
-        <Typography variant="h3" className={classes.align}>{title}</Typography>
+        <Typography variant="h4" className={classes.align}>{title}</Typography>
         <Typography variant="h6" className={classes.align}>{subtitle}</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classNames(

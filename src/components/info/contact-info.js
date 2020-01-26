@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
     cursor: 'pointer',
   },
   info: {
+    color: theme.palette.text.main,
     '&:hover': {
       color: theme.palette.green.main
     }

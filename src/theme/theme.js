@@ -14,8 +14,9 @@ const COLORS = {
     main: '#3DDC84'
   },
   text: {
-    main: '#A4A5A6',
-    secondary: '#979899'
+    main: '#111111',
+    secondary: '#111111',
+    sectionTitle:'#FFFFFF'
   }
 };
 
@@ -39,13 +40,18 @@ export const theme = createMuiTheme({
       fontWeight: 600,
       fontSize: '16px',
     },
+    h4: {
+      color: COLORS.text.sectionTitle,
+      fontWeight: 600,
+      fontSize: '16px',
+    },
     h5: {
       color: COLORS.text.main,
       fontWeight: 600,
       fontSize: '14px',
     },
     h6: {
-      color: COLORS.text.secondary,
+      color: COLORS.text.sectionTitle,
       fontSize: '12px',
       marginTop: '8px'
     },

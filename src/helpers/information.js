@@ -43,8 +43,8 @@ export const socialLinksInfo = {
 };
 
 export const aboutMeInfo = {
-  title: 'Intro',
-  subtitle: 'What I am all about',
+  title: 'A bit about me',
+  subtitle: '',
   content: (
     <>
       {'Android developer and fanboy from Chennai, India. Loves to be caught \

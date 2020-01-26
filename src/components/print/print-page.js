@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import {
   Grid,
   Typography,
@@ -55,6 +56,10 @@ const useStyles = makeStyles(theme => ({
   chip: {
     margin: '8px 8px 8px 0',
     height: 24
+  },
+  h6text: {
+    color: theme.palette.text.main,
+    fontSize: '12px'
   }
 }));
 
@@ -86,19 +91,19 @@ const PrintPage = () => {
             <Grid item container direction="column" className={classes.section}>
               <Grid item>
                 <Typography variant="h5">Address</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{location.displayName}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{location.displayName}</Typography>
               </Grid>
               <Grid item>
                 <Typography variant="h5">Phone</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{phone.displayName}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{phone.displayName}</Typography>
               </Grid>
               <Grid item>
                 <Typography variant="h5">Email</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{email.value}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{email.value}</Typography>
               </Grid>
               <Grid item>
                 <Typography variant="h5">Website</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{website.displayName}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{website.displayName}</Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -118,8 +123,8 @@ const PrintPage = () => {
               return (
               <Grid item key={title} className={classes.section}>
                 <Typography variant="h5">{subtitle}</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{title}, {caption}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{duration}</Typography>
               </Grid>
               );
             })}
@@ -138,9 +143,9 @@ const PrintPage = () => {
                   <Grid item key={title} className={classes.section}>
                     <Grid item container justify="space-between">
                       <Typography variant="h5">{subtitle}</Typography>
-                      <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>
+                      <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{duration}</Typography>
                     </Grid>       
-                    <Typography variant="h6" className={classes.noSpace}>{title}, {caption}</Typography>
+                    <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{title}, {caption}</Typography>
                     <Typography variant="body1">{shortContent}</Typography>
                   </Grid>
                 );
