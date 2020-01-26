@@ -31,10 +31,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
-    borderTop: `1px solid ${theme.palette.grey.light}`
+    borderTop: `1px solid ${theme.palette.background.light}`
   },
   aboutContainer: {
-    borderRight: `1px solid ${theme.palette.grey.light}`,
+    borderRight: `1px solid ${theme.palette.background.light}`,
     padding: '16px 0'
   },
   infoContainer: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   divider: {
     marginTop: theme.spacing(1),
     width: '100%',
-    backgroundColor: theme.palette.grey.dark,
+    backgroundColor: theme.palette.background.dark,
     height: '2px'
   },
   section: {

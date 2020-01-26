@@ -5,10 +5,8 @@ export const myInfo = {
 };
 
 export const contactInfo = {
-  section: {
-    title: 'Contact',
-    subtitle: 'Call me, maybe'
-  },
+  title: 'Contact',
+  subtitle: 'Call me, maybe',
   location: {
     title: 'Location',
     value: 'Victoria, BC'

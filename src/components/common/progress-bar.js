@@ -15,11 +15,11 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   percentage: {
-    color: theme.palette.yellow.main,
+    color: theme.palette.green.main,
     paddingRight: theme.spacing(1)
   },
   title: {
-    color: '#A4A5A6'
+    color: theme.palette.text.main
   },
   progressContainer: {
     marginTop: theme.spacing(1)
@@ -28,10 +28,10 @@ const useStyles = makeStyles(theme => ({
     height: '6px'
   },
   progressBar: {
-    backgroundColor: theme.palette.grey.secondary,
+    backgroundColor: theme.palette.background.secondary,
   },
   progress: {
-    backgroundColor: theme.palette.yellow.main
+    backgroundColor: theme.palette.green.main
   }
 }));
 

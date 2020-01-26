@@ -13,12 +13,12 @@ import { myInfo } from '../../helpers/information';
 const useStyles = makeStyles(theme => ({
   container: {
     height: '100vh',
+    backgroundColor: theme.palette.background.page,
   },
   avatarContainer: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: theme.palette.grey.main,
     padding: theme.spacing(4),
 
     [theme.breakpoints.up('lg')]: {
@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
   infoContainer: {
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: theme.palette.grey.light,
     position: 'relative'
   },
   avatar: {

@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     cursor: 'pointer'
   },
   avatar: {
-    backgroundColor: theme.palette.grey.medium,
+    backgroundColor: theme.palette.background.medium,
   }
 }));
 

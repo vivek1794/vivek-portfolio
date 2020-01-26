@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   line: {
     width: '60px',
     height: '4px',
-    backgroundColor: '#E0A80D',
+    backgroundColor: theme.palette.green.main,
     marginBottom: theme.spacing(1)
   },
 }));
