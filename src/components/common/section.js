@@ -9,14 +9,23 @@ import {
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
-    backgroundColor: theme.palette.background.page,
 
     '@media print': {
       display: 'none'
     }
   },
+  sectionContainer: {
+    backgroundColor: theme.palette.background.section,
+  },
   contentContainer: {
-    padding: theme.spacing(8)
+    backgroundColor: theme.palette.background.content,
+  },
+  content: {
+    padding: '16px 64px',
+
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(8),
+    }
   },
   align: {
     [theme.breakpoints.up('lg')]: {
@@ -43,11 +52,12 @@ const Section = ({
 
   return (
     <Grid container className={classes.container}>
-      <Grid item xs={12} lg={4} className={classes.contentContainer}>
+      <Grid item xs={12} lg={4} className={classNames(classes.content, classes.sectionContainer)}>
         <Typography variant="h3" className={classes.align}>{title}</Typography>
         <Typography variant="h6" className={classes.align}>{subtitle}</Typography>
       </Grid>
       <Grid item xs={12} lg={8} className={classNames(
+        classes.content,
         classes.contentContainer,
         {
           [classes.paddingTop]: paddingTop,

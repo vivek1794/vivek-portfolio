@@ -7,7 +7,8 @@ const COLORS = {
     light: '#2D2E2E',
     dark: '#292A2A',
     medium: '#3F4040',
-    page: '#212121',
+    section: '#343434',
+    content: '#FFF'
   },
   green: {
     main: '#3DDC84'
