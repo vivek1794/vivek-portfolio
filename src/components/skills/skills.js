@@ -20,7 +20,7 @@ const Skills = () => {
       title={title}
       subtitle={subtitle}
       content={skills.map(skill => (
-        <Grid item xs={12} sm={6} className={classes.skillContainer}>
+        <Grid item key={skill.title} xs={12} sm={6} className={classes.skillContainer}>
           <ProgressBar name={skill.title} value={skill.value} />
         </Grid>
       ))}

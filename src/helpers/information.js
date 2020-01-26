@@ -1,3 +1,11 @@
+import React from 'react';
+
+const styles = {
+  text: {
+    fontSize: '20px'
+  }
+};
+
 export const myInfo = {
   firstName: 'Vivek',
   lastName: 'Chanddru',
@@ -37,10 +45,15 @@ export const socialLinksInfo = {
 export const aboutMeInfo = {
   title: 'Intro',
   subtitle: 'What I am all about',
-  content: `Android developer and fanboy from Chennai, India. Loves to be caught \
-            up with the latest gadgets and developments in Android arena. Dabbles\
-            a bit with IoT and Web development when there is free time. Loves to \
-            play with <div>s when I am not playing with the <ConstraintLayout>`
+  content: (
+    <>
+      {'Android developer and fanboy from Chennai, India. Loves to be caught \
+        up with the latest gadgets and developments in '}
+      <b style={styles.text}>Android</b>
+      {' arena. Dabbles a bit with IoT and Web development when there is free time. \
+        Loves to play with <div>s when I am not playing with the <ConstraintLayout>'}
+    </>
+  )
 };
 
 export const skillInfo = {
