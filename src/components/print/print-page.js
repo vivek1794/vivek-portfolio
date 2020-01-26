@@ -6,7 +6,8 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText
+  ListItemText,
+  Chip
 } from '@material-ui/core';
 import StarsIcon from '@material-ui/icons/Stars';
 
@@ -19,11 +20,10 @@ import {
   awardInfo
 } from '../../helpers/information';
 
-import ProgressBar from '../common/progress-bar';
-
 const useStyles = makeStyles(theme => ({
   container: {
     padding: theme.spacing(4),
+    height: '100vh',
     display: 'none',
 
     '@media print': {
@@ -52,6 +52,11 @@ const useStyles = makeStyles(theme => ({
   noSpace: {
     margin: 0,
     padding: 0
+  },
+  chip: {
+    marginRight: 4,
+    marginLeft: 4,
+    height: 24
   }
 }));
 
@@ -103,9 +108,7 @@ const PrintPage = () => {
           <Grid item className={classes.section}>
             <Typography variant="h3">Skills</Typography>
             {skills.map(skill => (
-              <Grid item key={skill.title} className={classes.section}>
-                <ProgressBar name={skill.title} value={skill.value} />
-              </Grid>
+              <Chip key={skill.title} classes={{ root: classes.chip }} label={skill.title} variant="outlined" />
             ))}
           </Grid>
 
