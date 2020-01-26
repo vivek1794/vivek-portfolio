@@ -9,7 +9,8 @@ export const contactInfo = {
   subtitle: 'Call me, maybe',
   location: {
     title: 'Location',
-    value: 'Victoria, BC'
+    value: 'https://www.google.com/maps/place/Victoria,+BC/@48.4262078,-123.376732,14z/data=!3m1!4b1!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444',
+    displayName: 'Victoria, BC'
   },
   phone: {
     title: 'Phone',

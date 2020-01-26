@@ -14,6 +14,11 @@ const useStyles = makeStyles(theme => ({
   container: {
     height: '100vh',
     backgroundColor: theme.palette.background.page,
+    display: 'flex',
+
+    '@media print': {
+      display: 'none'
+    }
   },
   avatarContainer: {
     display: 'flex',

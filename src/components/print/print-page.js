@@ -23,7 +23,6 @@ import {
 const useStyles = makeStyles(theme => ({
   container: {
     padding: theme.spacing(4),
-    height: '100vh',
     display: 'none',
 
     '@media print': {
@@ -54,8 +53,7 @@ const useStyles = makeStyles(theme => ({
     padding: 0
   },
   chip: {
-    marginRight: 4,
-    marginLeft: 4,
+    margin: '8px 8px 8px 0',
     height: 24
   }
 }));
@@ -88,7 +86,7 @@ const PrintPage = () => {
             <Grid item container direction="column" className={classes.section}>
               <Grid item>
                 <Typography variant="h5">Address</Typography>
-                <Typography variant="h6" className={classes.noSpace}>{location.value}</Typography>
+                <Typography variant="h6" className={classes.noSpace}>{location.displayName}</Typography>
               </Grid>
               <Grid item>
                 <Typography variant="h5">Phone</Typography>
@@ -137,7 +135,7 @@ const PrintPage = () => {
                 const { title, subtitle, caption, duration, shortContent } = experience;
 
                 return (
-                  <Grid item key={title}>
+                  <Grid item key={title} className={classes.section}>
                     <Grid item container justify="space-between">
                       <Typography variant="h5">{subtitle}</Typography>
                       <Typography variant="h6" className={classes.noSpace}>{duration}</Typography>

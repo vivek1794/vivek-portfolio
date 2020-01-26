@@ -15,6 +15,10 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     backgroundColor: theme.palette.background.medium,
+
+    '&:hover': {
+      backgroundColor: theme.palette.green.main
+    }
   }
 }));
 
