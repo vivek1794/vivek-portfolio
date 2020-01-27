@@ -18,7 +18,9 @@ import {
   skillInfo,
   experienceInfo,
   educationInfo,
-  awardInfo
+  awardInfo,
+  techInfo,
+  talksInfo
 } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
@@ -69,9 +71,11 @@ const PrintPage = () => {
   const { firstName, lastName, role } = myInfo;
   const { location, phone, website, email } = contactInfo;
   const { skills } = skillInfo;
+  const { techs } = techInfo;
   const { experiences } = experienceInfo;
   const { educations } = educationInfo;
   const { awards } = awardInfo;
+  const { talks } = talksInfo;
 
   return (
     <Grid container className={classes.container}>
@@ -109,13 +113,6 @@ const PrintPage = () => {
           </Grid>
 
           <Grid item className={classes.section}>
-            <Typography variant="h3">Skills</Typography>
-            {skills.map(skill => (
-              <Chip key={skill.title} classes={{ root: classes.chip }} label={skill.title} variant="outlined" />
-            ))}
-          </Grid>
-
-          <Grid item className={classes.section}>
             <Typography variant="h3">Education</Typography>
             {educations.map(education => {
               const { title, subtitle, caption, duration } = education;
@@ -129,6 +126,30 @@ const PrintPage = () => {
               );
             })}
           </Grid>
+
+          <Grid item className={classes.section}>
+            <Typography variant="h3">Public Speaking</Typography>
+            {talks.map(talk => {
+              return (
+              <Grid item key={talk.title} className={classes.section}>
+                <Typography variant="h5">{talk.title}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{talk.content}</Typography>
+              </Grid>
+              );
+            })}
+          </Grid>
+
+          <Grid item className={classes.section}>
+            <Typography variant="h3">Skills</Typography>
+            {skills.map(skill => (
+              <Chip key={skill.title} classes={{ root: classes.chip }} label={skill.title} variant="outlined" />
+            ))}
+             {techs.map(tech => (
+              <Chip key={tech} classes={{ root: classes.chip }} label={tech} variant="outlined" />
+            ))}
+          </Grid>
+
+          
         </Grid>
 
         <Grid item container xs={8} direction="column" className={classes.infoContainer}>
@@ -154,7 +175,7 @@ const PrintPage = () => {
           </Grid>
           
           <Grid item container className={classes.section}>
-            <Typography variant="h3">Awards and Achievements</Typography>
+            <Typography variant="h3">Certifications</Typography>
             <Grid item xs={12}>
               <List disablePadding>
                 {awards.map(award => {
