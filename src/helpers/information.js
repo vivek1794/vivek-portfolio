@@ -25,8 +25,8 @@ export const contactInfo = {
   subtitle: 'Call me, maybe',
   location: {
     title: 'Location',
-    value: 'https://www.google.com/maps/place/Victoria,+BC/@48.4262078,-123.376732,14z/data=!3m1!4b1!4m5!3m4!1s0x548f738bddb06171:0x38e8f3741ebb48ed!8m2!3d48.4284207!4d-123.3656444',
-    displayName: 'Victoria, BC'
+    value: 'https://www.google.com/maps/place/Vancouver,+BC/@49.2576508,-123.2639868,11z/data=!3m1!4b1!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375',
+    displayName: 'Vancouver, BC'
   },
   phone: {
     title: 'Phone',
@@ -113,10 +113,26 @@ export const experienceInfo = {
   subtitle: 'Places where I grew and helped grow',
   experiences: [
     {
+      title: 'Amazon Canada',
+      subtitle: 'Software Development Engineer - Android Developer',
+      caption: 'Vancouver, BC',
+      duration: 'August 2020 - present',
+      content: (
+        <>
+        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app.</a> {'. '} 
+        </>
+      ),
+      shortContent: (
+        <>
+        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app.</a> {'. '} 
+        </>
+      )
+    },
+    {
       title: 'Freshworks Studio',
       subtitle: 'Android Developer',
       caption: 'Victoria, BC',
-      duration: 'February 2019 - present',
+      duration: 'February 2019 - August 2020',
       content: (
         <>
         {'Worked on a number of mobile apps for FreshWorks Studio clients ranging from Provincial Government to Private organizations.'}
