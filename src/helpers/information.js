@@ -119,12 +119,12 @@ export const experienceInfo = {
       duration: 'August 2020 - present',
       content: (
         <>
-        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app.</a> {'. '} 
+        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app</a>{'. '} 
         </>
       ),
       shortContent: (
         <>
-        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app.</a> {'. '} 
+        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app</a>{'. '} 
         </>
       )
     },
