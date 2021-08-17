@@ -119,18 +119,32 @@ export const experienceInfo = {
       duration: 'August 2020 - present',
       content: (
         <>
-        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app</a>{'. '} 
+        {'Currently working as Software Development Engineer (SDE2) for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '} 
+        <ul>
+          <li>Worked on various design documents for architecting new features.</li>
+          <li>Created reusable UI widgets that are being used throughout the app.</li>
+          <li>Worked with the team and performed design and code reviews.</li>
+          <li>Designed, documented and implemented various critical features for the application.</li>
+          <li>Came up with new processes and improvements to the build infrastructure making it easier for developers to continuously develop and release.</li>
+        </ul>
         </>
       ),
       shortContent: (
         <>
-        {'Currently working on various interesting features for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos Android app</a>{'. '} 
+        {'Currently working as Software Development Engineer (SDE2) for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '} 
+        <ul>
+          <li>Worked on various design documents for architecting new features.</li>
+          <li>Created reusable UI widgets that are being used throughout the app.</li>
+          <li>Worked with the team and performed design and code reviews.</li>
+          <li>Designed, documented and implemented various critical features for the application.</li>
+          <li>Came up with new processes and improvements to the build infrastructure making it easier for developers to continuously develop and release.</li>
+        </ul>
         </>
       )
     },
     {
       title: 'Freshworks Studio',
-      subtitle: 'Android Developer',
+      subtitle: 'Android Developer & Lead',
       caption: 'Victoria, BC',
       duration: 'February 2019 - August 2020',
       content: (
@@ -251,6 +265,25 @@ export const awardInfo = {
     {
       title: 'Rational Application Developer - 2013',
       content: 'IBM'
+    },
+  ]
+};
+
+export const volunteerInfo = {
+  title: 'Event Planning',
+  subtitle: 'Love for Android even after work',
+  events: [
+    {
+      title: 'droidcon India',
+      content: 'Program Head'
+    },
+    {
+      title: 'GDG Vancouver',
+      content: 'Organizer'
+    },
+    {
+      title: 'droidcon London 2017',
+      content: 'Volunteer'
     },
   ]
 };

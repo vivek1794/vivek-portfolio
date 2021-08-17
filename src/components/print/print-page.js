@@ -20,7 +20,8 @@ import {
   educationInfo,
   awardInfo,
   techInfo,
-  talksInfo
+  talksInfo,
+  volunteerInfo
 } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
@@ -62,6 +63,9 @@ const useStyles = makeStyles(theme => ({
   h6text: {
     color: theme.palette.text.main,
     fontSize: '12px'
+  },
+  sectionTitle: {
+    color: theme.palette.green.main
   }
 }));
 
@@ -76,13 +80,14 @@ const PrintPage = () => {
   const { educations } = educationInfo;
   const { awards } = awardInfo;
   const { talks } = talksInfo;
+  const { events } = volunteerInfo;
 
   return (
     <Grid container className={classes.container}>
 
       <Grid item container className={classes.section}>
         <Grid item>
-          <Typography variant="h2">{firstName} {lastName}</Typography>
+          <Typography variant="h2"><span className={classNames(classes.noSpace,classes.sectionTitle)}>{firstName}</span> {lastName}</Typography>
           <Typography variant="h3">{role}</Typography>
         </Grid>
       </Grid>
@@ -91,7 +96,7 @@ const PrintPage = () => {
 
         <Grid item container xs={4} direction="column" className={classes.aboutContainer}>
           <Grid item className={classes.section}>
-            <Typography variant="h3">Info</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Info</Typography>
             <Grid item container direction="column" className={classes.section}>
               <Grid item>
                 <Typography variant="h5">Address</Typography>
@@ -113,7 +118,7 @@ const PrintPage = () => {
           </Grid>
 
           <Grid item className={classes.section}>
-            <Typography variant="h3">Education</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Education</Typography>
             {educations.map(education => {
               const { title, subtitle, caption, duration } = education;
 
@@ -128,7 +133,7 @@ const PrintPage = () => {
           </Grid>
 
           <Grid item className={classes.section}>
-            <Typography variant="h3">Public Speaking</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Public Speaking</Typography>
             {talks.map(talk => {
               return (
               <Grid item key={talk.title} className={classes.section}>
@@ -140,7 +145,19 @@ const PrintPage = () => {
           </Grid>
 
           <Grid item className={classes.section}>
-            <Typography variant="h3">Skills</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Events Organized</Typography>
+            {events.map(event => {
+              return (
+              <Grid item key={event.title} className={classes.section}>
+                <Typography variant="h5">{event.title}</Typography>
+                <Typography variant="h6" className={classNames(classes.noSpace,classes.h6text)}>{event.content}</Typography>
+              </Grid>
+              );
+            })}
+          </Grid>
+
+          <Grid item className={classes.section}>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Skills</Typography>
             {skills.map(skill => (
               <Chip key={skill.title} classes={{ root: classes.chip }} label={skill.title} variant="outlined" />
             ))}
@@ -155,7 +172,7 @@ const PrintPage = () => {
         <Grid item container xs={8} direction="column" className={classes.infoContainer}>
 
           <Grid item container className={classes.section}>
-            <Typography variant="h3">Experiences</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Experiences</Typography>
             <Grid item container direction="column" className={classes.section}>
               {experiences.map(experience => {
                 const { title, subtitle, caption, duration, shortContent } = experience;
@@ -175,7 +192,7 @@ const PrintPage = () => {
           </Grid>
           
           <Grid item container className={classes.section}>
-            <Typography variant="h3">Certifications</Typography>
+            <Typography variant="h3" className={classNames(classes.noSpace,classes.sectionTitle)}>Certifications</Typography>
             <Grid item xs={12}>
               <List disablePadding>
                 {awards.map(award => {

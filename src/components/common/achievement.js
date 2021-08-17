@@ -7,7 +7,7 @@ import {
 
 const useStyles = makeStyles(theme => ({
   itemContainer: {
-    display: 'flex',
+    display: 'block',
     paddingRight: theme.spacing(6),
     paddingBottom: theme.spacing(3)
   },

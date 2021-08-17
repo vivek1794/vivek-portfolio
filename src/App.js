@@ -10,6 +10,7 @@ import Tech from './components/tech/tech';
 import Experience from './components/experience/experience';
 import Education from './components/education/education';
 import Awards from './components/awards/awards';
+import Volunteer from './components/volunteer/volunteer';
 import Talks from './components/talks/talks';
 import Contact from './components/contact/contact';
 import PrintPage from './components/print/print-page';
@@ -24,6 +25,7 @@ const App = () => (
     <Experience />
     <Education />
     <Awards />
+    <Volunteer />
     <Contact />
     <PrintPage />
   </ThemeProvider>
