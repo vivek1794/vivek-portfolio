@@ -17,7 +17,7 @@ const styles = {
 export const myInfo = {
   firstName: 'Vivek',
   lastName: 'Chanddru',
-  role: 'Software Development Engineer III'
+  role: 'Senior Software Development Engineer'
 };
 
 export const contactInfo = {
@@ -30,7 +30,7 @@ export const contactInfo = {
   },
   phone: {
     title: 'Phone',
-    value: '++1454039678',
+    value: '+14254039678',
     displayName: '425.403.9678'
   },
   website: {
@@ -55,12 +55,9 @@ export const aboutMeInfo = {
   subtitle: 'Just a little bit',
   content: (
     <>
-      {'Mobile developer and fanboy from Chennai, India who now calls Seattle, Washington as home. \
-        Dabbles a bit with IoT and Web development when there is free time. \
-        Loves to play with' } <pre style={styles.code}>&lt;div&gt;</pre> {'s when I am not spending time with the '}
-        <pre style={styles.code}>&lt;ConstraintLayout&gt;</pre>
-        {'. Cross-platform enthusiast. True believer in Sharing Knowledge. Writes tech blog when there is time and often goes\
-         on stage to talk about Android/Mobile.'}
+      {'Highly accomplished Senior Software Development Engineer with 10 years of experience in Android, iOS, React Native development. Proven track record \
+      of building and leading teams, delivering high-quality applications, and improving developer velocity. Expertise in Kotlin, Java, Swift, React Native and mobile-first architecture. \
+      Passionate about building scalable, efficient, and user-friendly mobile experiences and contributing back to the developer community through public speaking and event organization.'}
     </>
   )
 };
@@ -75,11 +72,11 @@ export const skillInfo = {
     },
     {
       title: 'Kotlin',
-      value: 90
+      value: 95
     },
     {
       title: 'Java',
-      value: 90
+      value: 95
     },
     {
       title: 'Web',
@@ -90,12 +87,12 @@ export const skillInfo = {
       value: 75
     },
     {
-      title: 'iOS*',
-      value: 60
+      title: 'iOS',
+      value: 80
     },
     {
       title: 'React Native',
-      value: 60
+      value: 80
     }
   ]
 };
@@ -104,10 +101,11 @@ export const techInfo = {
   title: 'Skills',
   subtitle: 'Sample of what I know',
   techs: [
-    "Retrofit","Coroutines","Reactive Programming","WebRTC",
-    "Functional Programming","GIT","SVN","HG", "Kotlin Multiplatform",
-    "Glide","Picasso","SDK Development","Google Services",
-    "Mobile Security","Team Management","Event Management"
+    "Android Jetpack", "Compose", "Kotlin Multiplatform", "Retrofit",
+    "Coroutines", "Reactive Programming", "WebRTC",
+    "Functional Programming", "VCS", "Kotlin Multiplatform",
+    "Glide", "Picasso", "SDK Development", "Google Services",
+    "Mobile Security", "Team Management", "Event Management"
   ]
 };
 
@@ -126,126 +124,104 @@ export const experienceInfo = {
     {
       title: 'Amazon',
       subtitle: 'Sr. Software Development Engineer',
-      caption: 'Seattle, WA',
+      caption: 'Seattle, WA, USA',
       duration: '08/31/2020 - present',
       content: (
         <>
-        {'Currently working as Senior Software Development Engineer for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '} 
-        <ul>
-          <li>Leading a team of Android, iOS and React Native engineers to facilitate better cross-platform infrastructure and foundations.</li>
-          <li>Responsible for identifying bottlenecks and developer velocity improvements in mobile cross-platform area, plan, propose and lead the team to deliver the projects. </li>
-        <li>Collaborate with cross-functional teams, including product managers, designers, and backend developers, to understand and create functional and non-functional requirements and design application architecture.</li>
-        <li>Develop efficient and reliable Mobile applications using Java, Kotlin, TypeScript or Swift.</li>
-<li>Implement best practices for performance optimization, memory management, and network communication to ensure smooth and responsive user experiences.</li>
-<li>Conduct thorough testing and debugging of applications to identify and resolve issues, ensuring high-quality software delivery.</li>
-<li>Introduce coding standards to be followed and participate in code reviews to ensure code quality, maintainability, and adherence to coding standards.</li>
-<li>Mentor junior developers, providing guidance and support in career development.</li>
-<li>Collaborate with teammates using version control systems like Git, ensuring seamless code integration and collaboration.</li>
-<li>Utilize issue tracking and project management tools (e.g., Jira) to track progress, prioritize tasks, and communicate effectively within the team.</li>
-<li>Lead end-to-end lifecycle of development of software by multiple engineers including but not limited to discovery, planning, conception, design, implementation, documentation and maintenance.</li>
-<li>Reviewing software design from other engineers and providing feedback on architectural issues, performance and implementation constraints. </li>
-<li>Set up and maintain build automation processes using internal Amazon tools like Brazil build system and Pipelines to enable continuous integration and deployment.</li>
-        </ul>
+          {'Currently working as Senior Software Development Engineer for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '}
+          <ul>
+            <li>Lead cross-functional teams of Android, iOS, and React Native engineers to enhance the cross-platform infrastructure for <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>.</li>
+            <li>Spearhead initiatives to resolve bottlenecks and optimize developer velocity by 60%, by creating shared frameworks and improving build infrastructure.</li>
+            <li>Collaborate with product managers, designers, and backend developers to define and implement architectural designs.</li>
+            <li>Design and develop scalable and performant mobile applications using Kotlin, Java, Swift, and TypeScript.</li>
+            <li>Mentor other developers, facilitate agile development, conduct code reviews, and enforce coding and design standards across the organization.</li>
+            <li>Implement best practices for memory management, performance optimization, and network communication.</li>
+            <li>Create automation and workflows to monitor operational performance of the application.</li>
+            <li>Drive processes using Amazon’s internal tools like the Brazil build system and Pipelines for CI/CD.</li>
+            <li>Led the recruitment process for mobile developers, identifying and onboarding top talent.</li>
+          </ul>
         </>
       ),
       shortContent: (
         <>
-        {'Currently working as Senior Software Development Engineer for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '} 
-        <ul>
-        <li>Leading a team of Android, iOS and React Native engineers to facilitate better cross-platform infrastructure and foundations.</li>
-          <li>Responsible for identifying bottlenecks and developer velocity improvements in mobile cross-platform area, plan, propose and lead the team to deliver the projects. </li>
-        <li>Collaborate with cross-functional teams, including product managers, designers, and backend developers, to understand and create functional and non-functional requirements and design application architecture.</li>
-<li>Develop efficient and reliable Mobile applications using Java, Kotlin, TypeScript or Swift.</li>
-<li>Implement best practices for performance optimization, memory management, and network communication to ensure smooth and responsive user experiences.</li>
-<li>Conduct thorough testing and debugging of applications to identify and resolve issues, ensuring high-quality software delivery.</li>
-<li>Introduce coding standards to be followed and participate in code reviews to ensure code quality, maintainability, and adherence to coding standards.</li>
-<li>Mentor junior developers, providing guidance and support in career development.</li>
-<li>Collaborate with teammates using version control systems like Git, ensuring seamless code integration and collaboration.</li>
-<li>Utilize issue tracking and project management tools (e.g., Jira) to track progress, prioritize tasks, and communicate effectively within the team.</li>
-<li>Lead end-to-end lifecycle of development of software by multiple engineers including but not limited to discovery, planning, conception, design, implementation, documentation and maintenance.</li>
-<li>Reviewing software design from other engineers and providing feedback on architectural issues, performance and implementation constraints. </li>
-<li>Set up and maintain build automation processes using internal Amazon tools like Brazil build system and Pipelines to enable continuous integration and deployment.</li>
-        </ul>
+          <ul>
+            <li>Lead cross-functional teams of Android, iOS, and React Native engineers to enhance the cross-platform infrastructure for <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>.</li>
+            <li>Spearhead initiatives to resolve bottlenecks and optimize developer velocity by 60%, by creating shared frameworks and improving build infrastructure.</li>
+            <li>Collaborate with product managers, designers, and backend developers to define and implement architectural designs.</li>
+            <li>Design and develop scalable and performant mobile applications using Kotlin, Java, Swift, and TypeScript.</li>
+            <li>Mentor other developers, facilitate agile development, conduct code reviews, and enforce coding and design standards across the organization.</li>
+            <li>Implement best practices for memory management, performance optimization, and network communication.</li>
+            <li>Create automation and workflows to monitor operational performance of the application.</li>
+            <li>Drive processes using Amazon’s internal tools like the Brazil build system and Pipelines for CI/CD.</li>
+            <li>Led the recruitment process for mobile developers, identifying and onboarding top talent.</li>
+          </ul>
         </>
       )
     },
     {
-      title: 'Freshworks Studio Inc.',
+      title: 'Freshworks Studio Inc. (Now EY Studios)',
       subtitle: 'Android Developer III',
-      caption: 'Victoria, BC',
+      caption: 'Victoria, BC, Canada',
       duration: '02/01/2019 - 08/30/2020',
       content: (
         <>
-        {'Worked on a number of mobile apps for FreshWorks Studio clients ranging from Provincial Government to Private organizations.'}
-        <ul>
-          <li>Worked as Android Developer for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a> mobile app.</li>
-          <li>Created and maintained modular codebase with good unit test coverage.</li>
-          <li>Implemented several security methods such as oAuth, JWT, KeyStore to protect data.</li>
-          <li>Documented major changes and proof of concepts for discussion with product management.</li>
-          <li>Architected Kotlin Multiplatform codebase for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.wearebcfs.students">BCFS Deals</a> app to share common business logic between iOS and Android apps.</li>
-          <li>Created and maintained <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.sailingplan.sailingplan">Sailing Plan</a> mobile app using modern development practices.</li>
-          <li>Mentored other Android developers on their career development plans and department goals.</li>
-        </ul>
+          {'Delivered mobile solutions for clients ranging from government agencies to private enterprises.'}
+          <ul>
+            <li>Led the Android and iOS development and release of the <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a> mobile app.</li>
+            <li>Advocated and successfully delivered Kotlin Multiplatform as a viable cross-platform technology choice for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.wearebcfs.students">BCFS Deals</a> app to share common business logic between iOS and Android apps.</li>
+            <li>Conducted business analysis and formulated technology roadmaps tailored to client needs.</li>
+            <li>Designed and implemented prototypes, data flow diagrams, and system models.</li>
+            <li>Mentored team members to support their professional growth and career advancement.</li>
+            <li>Combined technical and leadership roles to ensure successful project delivery.</li>
+          </ul>
         </>
       ),
       shortContent: (
         <>
-        {'Worked on a number of mobile apps for FreshWorks Studio clients ranging from Provincial Government to Private organizations.'}
-        <ul>
-<li>Analyzed business problems of clients and help formulate technology roadmap</li>
-<li>Identified and proposed technology solutions viable to the client needs.</li>
-<li>Collaborated with other app development experts and address business, technical, and logical needs</li>
-<li>Generated interface designs, prototypes, data flow diagrams, and system models.</li>
-<li>Created test plans, test scripts, and conducted system testing.</li>
-<li>Participated in app development, deployment, and migration.</li>
-<li>Prepared technical documents and other required functional specifications.</li>
-<li>Mentored and managed mobile team members to enable their career growth and advancement. </li>
-<li>Managed the delivery of BC Services Card mobile app product through various development cycles in addition to working as a developer. </li>
-<li>Responsible for android and iOS mobile app development and was also managing the project as a Project Manager. </li>
-        </ul>
+          <ul>
+            <li>Delivered mobile solutions for clients ranging from government agencies to private enterprises.</li>
+            <li>Led the Android and iOS development and release of the <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a> mobile app.</li>
+            <li>Advocated and successfully delivered Kotlin Multiplatform as a viable cross-platform technology choice for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.wearebcfs.students">BCFS Deals</a> app to share common business logic between iOS and Android apps.</li>
+            <li>Integrated Google Play Billing to enable subscriptions on <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.sailingplan.sailingplan">SailingPlan</a> Android application, increasing revenue by 40%.</li>
+            <li>Conducted business analysis and formulated technology roadmaps tailored to client needs.</li>
+            <li>Created detailed technical design documents with data flow diagrams, system models and prototypes.</li>
+            <li>Mentored team members to support their professional growth and career advancement.</li>
+            <li>Combined technical and leadership roles to ensure successful project delivery.</li>
+          </ul>
         </>
       )
     },
     {
       title: 'Zoho Corporation Pvt. Ltd.',
       subtitle: 'Member Technical Staff',
-      caption: 'Chennai, IN',
+      caption: 'Chennai, TN, India',
       duration: '05/11/2015 - 01/18/2019',
       content: (
         <>
-  {'Worked on '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a> 
-  {' & '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> {'suite of mobile apps.'}
-        <ul>
-          <li>Was the Mobile Apps Tech Lead and lead a team of 5 Android and iOS developers.</li>
-          <li>Created and mainted the Android application for Zoho Assist which is used for Remote Desktop sharing.</li>
-          <li>Developed multi-modular codebase for Zoho Assist and Zoho Meeting.</li>
-          <li>Created custom WebRTC SDK for Zoho Meeting over the native WebRTC SDK.</li>
-          <li>Designed and architected the customer SDK for Zoho Assist mobile apps.</li>
-          <li>Created the CI/CD pipeline for deployment of Zoho Assist SDK using Gitlab Runners.</li>
-          <li>Worked on Automated testing bot and report generation using Spoon SDK, PHP, Bash and JS.</li>
-          <li>Organized monthly meetups for the Android team to promote knowledge sharing.</li>
-        </ul>
+          {'Led the team of five engineers developing '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>{', '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a>{' and '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a>{' mobile apps, fostering collaboration and innovation'}
+          <ul>
+            <li>Led the team of five engineers developing <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>, <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a> and <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> mobile apps, fostering collaboration and innovation.</li>
+            <li>Designed user interfaces, data models, and workflows for mobile applications.</li>
+            <li>Authored and maintained multi-module Java/Kotlin codebase for Android apps.</li>
+            <li>Created an SDK to abstract native WebRTC framework, to be used across Zoho Workplace applications.</li>
+            <li>Created an SDK to facilitate Remote Mobile Sharing functionality from Android device and shared it with enterprise customers to integrate within their applications.</li>
+            <li>Proactively launched and facilitated monthly knowledge-sharing sessions to educate the team on cutting-edge mobile technologies and promote best practices.</li>
+            <li>Published applications to app stores and managed their lifecycle.</li>
+          </ul>
         </>
       ),
       shortContent: (
         <>
-        {'Worked on '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a> 
-        {' & '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> {'suite of mobile apps.'}
-              <ul>
-<li>Analyzed the requirements and arrive at a proper plan for the development.</li>
-<li>Identified the proper tools and technologies required to accomplish the tasks </li>
-<li>Collaborated with the other developers in the organization to complete the tasks.</li>
-<li>Worked on the User Interface designs, data model and data flow designs. </li>
-<li>Wrote and maintained the Java/Kotlin code for Android applications.</li>
-<li>Wrote test cases and test scripts for various scenarios of the mobile application.</li>
-<li>Created and maintained documentations for various frameworks and processes. </li>
-<li>Managed a team of 5 Android and iOS engineers and helped them develop mobile applications.</li>
-<li>Trained the Customer Support technicians to identify, fix and inform the end users about the issues. </li>
-<li>Researched new technologies and tools which could improve productivity and shared it with other developers in the team.</li>
-<li>Helped in deployment of the application to various app stores. </li>
-<li>Mentor fellow developers on Android development skills.</li>
-              </ul>
-              </>
+        <ul>
+            <li>Led the team of five engineers developing <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>, <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a> and <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> mobile apps, fostering collaboration and innovation.</li>
+            <li>Designed user interfaces, data models, and workflows for mobile applications.</li>
+            <li>Authored and maintained multi-module Java/Kotlin codebase for Android apps.</li>
+            <li>Created an SDK to abstract native WebRTC framework, to be used across Zoho Workplace applications.</li>
+            <li>Created an SDK to facilitate Remote Mobile Sharing functionality from Android device and shared it with enterprise customers to integrate within their applications.</li>
+            <li>Proactively launched and facilitated monthly knowledge-sharing sessions to educate the team on cutting-edge mobile technologies and promote best practices.</li>
+            <li>Published applications to app stores and managed their lifecycle.</li>
+          </ul>
+        </>
       )
     },
   ]
@@ -258,26 +234,25 @@ export const educationInfo = {
     {
       title: 'R.M.K. Engineering College',
       subtitle: 'Bachelor of Engineering - CS',
-      caption: 'Chennai, IN',
+      caption: 'Chennai, TN, India',
       duration: '08/01/2011 - 05/31/2015',
       content: (
         <>
-        {`Completed Bachelors degree from Anna University affliated college.`}
-        <ul>
-          <li>Secured 8.94/10 CGPA and came out as a college topper.</li>
-          <li>Secured 14th rank among all CS graduates from the University.</li>
-          <li>Was elected President of CS department and conducted various inter college events.</li>
-        </ul>
+          {`Completed Bachelors degree from Anna University affliated college.`}
+          <ul>
+            <li>Secured 8.94/10 CGPA and came out as a college topper.</li>
+            <li>Secured 14th rank among all CS graduates from the University.</li>
+            <li>Was elected President of CS department and conducted various inter college events.</li>
+          </ul>
         </>
       ),
       shortContent: (
         <>
-        {`Completed Bachelors degree from Anna University, Chennai India affliated college.`}
-        <ul>
-          <li>Secured 8.94/10 CGPA and came out as a college topper.</li>
-          <li>Secured 14th rank among all CS graduates from the University.</li>
-          <li>Was elected President of CS department and conducted various inter college events.</li>
-        </ul>
+          {`Completed Bachelors degree from Anna University, Chennai, India affliated college.`}
+          <ul>
+            <li>8.94/10 CGPA, ranking in top 15 in the University.</li>
+            <li>Was elected President of CS department and conducted various inter college events.</li>
+          </ul>
         </>
       )
     },
@@ -289,16 +264,16 @@ export const awardInfo = {
   subtitle: 'To prove I know a few things',
   awards: [
     {
-      title: 'Associate Android Developer - 2018',
-      content: 'Google'
+      title: 'Associate Android Developer',
+      content: 'Google | 2018'
     },
     {
-      title: 'Business English Certification - 2013',
-      content: 'University of Cambridge'
+      title: 'Business English Certification',
+      content: 'University of Cambridge | 2013'
     },
     {
-      title: 'Rational Application Developer - 2013',
-      content: 'IBM'
+      title: 'Rational Application Developer',
+      content: 'IBM | 2013'
     },
   ]
 };
