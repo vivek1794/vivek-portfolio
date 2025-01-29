@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 
 const ContactInfo = () => {
   const classes = useStyles();
-  const { location, phone, website, email } = contactInfo;
+  const { location, phone, blog, email } = contactInfo;
   
   const contactLink = `tel:${phone.value}`;
   const emailLink = `mailto:${email}`;
@@ -51,9 +51,9 @@ const ContactInfo = () => {
       </Grid>
       <Grid item container xs={12} lg={6}>
         <Grid item xs={12} sm={6} className={classes.contact}>
-          <Typography variant="h5" className={classes.align}>{website.title}</Typography>
-          <a href={website.value} target="_blank" rel="noopener noreferrer" className={classes.link}>
-            <Typography variant="h6" className={classNames(classes.align, classes.info)}>{website.displayName}</Typography>
+          <Typography variant="h5" className={classes.align}>{blog.title}</Typography>
+          <a href={blog.value} target="_blank" rel="noopener noreferrer" className={classes.link}>
+            <Typography variant="h6" className={classNames(classes.align, classes.info)}>{blog.displayName}</Typography>
           </a>
         </Grid>
         <Grid item xs={12} sm={6} className={classes.contact}>

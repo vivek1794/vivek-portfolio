@@ -38,6 +38,11 @@ export const contactInfo = {
     value: 'https://vivekc.me',
     displayName: 'vivekc.me'
   },
+  blog: {
+    title: 'Blog',
+    value: 'https://vivekc.xyz',
+    displayName: 'vivekc.xyz'
+  },
   email: {
     title: 'Email',
     value: 'vivek.chanddru@gmail.com'

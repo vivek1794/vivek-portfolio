@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     width: 100
   },
   personalSummaryBlob: {
-    marginTop: 8,
+    marginTop: theme.spacing(1),
   },
   infoContainer: {
     padding: theme.spacing(2)
@@ -99,7 +99,7 @@ const PrintPage = () => {
           <Grid item justify='space-between' xs={2}>
             <Avatar
             src={AvatarLogo}
-            style={classes.avatarIcon}
+            className={classes.avatarIcon}
             />
           </Grid>
           <Grid item>
@@ -108,7 +108,7 @@ const PrintPage = () => {
             <Typography variant="overline">{location.displayName} <strong>|</strong> {phone.displayName} <strong>|</strong> {email.value} <strong>|</strong> {website.displayName} </Typography>
           </Grid>          
         </Grid>
-        <Grid item style={classes.personalSummaryBlob}>
+        <Grid item className={classes.personalSummaryBlob}>
         <Typography variant="body2">{content}</Typography>
         </Grid>
       </Grid>
