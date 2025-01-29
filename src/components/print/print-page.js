@@ -3,18 +3,16 @@ import classNames from 'classnames';
 import {
   Grid,
   Typography,
+  Avatar,
   makeStyles,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
   Chip
 } from '@material-ui/core';
-import StarsIcon from '@material-ui/icons/Stars';
+import AvatarLogo from '../../assets/avatar.jpg';
 
 import {
   myInfo,
   contactInfo,
+  socialLinksInfo,
   aboutMeInfo,
   skillInfo,
   experienceInfo,
@@ -40,6 +38,13 @@ const useStyles = makeStyles(theme => ({
   aboutContainer: {
     borderRight: `1px solid ${theme.palette.background.light}`,
     padding: '16px 0'
+  },
+  avatarIcon: {
+    height: 100, 
+    width: 100
+  },
+  personalSummaryBlob: {
+    marginTop: 8,
   },
   infoContainer: {
     padding: theme.spacing(2)
@@ -90,11 +95,21 @@ const PrintPage = () => {
 
       {/* Header */}
       <Grid item container className={classes.section}>
-        <Grid item>
-          <Typography variant="h2"><span className={classNames(classes.noSpace, classes.sectionTitle)}>{firstName}</span> {lastName}</Typography>
-          <Typography variant="h3">{role}</Typography>
-          <Typography variant="overline">{location.displayName} <strong>|</strong> {phone.displayName} <strong>|</strong> {email.value} <strong>|</strong> {website.displayName} </Typography>
-          <Typography variant="body2">{content}</Typography>
+        <Grid item container direction="row">
+          <Grid item justify='space-between' xs={2}>
+            <Avatar
+            src={AvatarLogo}
+            style={classes.avatarIcon}
+            />
+          </Grid>
+          <Grid item>
+            <Typography variant="h2"><span className={classNames(classes.noSpace, classes.sectionTitle)}>{firstName}</span> {lastName}</Typography>
+            <Typography variant="h3">{role}</Typography>
+            <Typography variant="overline">{location.displayName} <strong>|</strong> {phone.displayName} <strong>|</strong> {email.value} <strong>|</strong> {website.displayName} </Typography>
+          </Grid>          
+        </Grid>
+        <Grid item style={classes.personalSummaryBlob}>
+        <Typography variant="body2">{content}</Typography>
         </Grid>
       </Grid>
 

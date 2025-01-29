@@ -35,8 +35,8 @@ export const contactInfo = {
   },
   website: {
     title: 'Web',
-    value: 'https://vivekc.xyz',
-    displayName: 'vivekc.xyz'
+    value: 'https://vivekc.me',
+    displayName: 'vivekc.me'
   },
   email: {
     title: 'Email',
