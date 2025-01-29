@@ -45,7 +45,7 @@ export const contactInfo = {
   },
   email: {
     title: 'Email',
-    value: 'chanddruvivek@gmail.com'
+    value: 'vivek.chanddru@gmail.com'
   }
 };
 
