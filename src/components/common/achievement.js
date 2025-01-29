@@ -28,7 +28,7 @@ const Achievement = ({ items }) => {
   return (
     <Grid container>
       {items.map(item => {
-        const { title, content } = item;
+        const { title, content, linkAnchor } = item;
 
         return (
           <Grid item key={title} container xs={12} sm={4} className={classes.itemContainer}>
@@ -37,6 +37,7 @@ const Achievement = ({ items }) => {
               <Typography variant="h5">{title}</Typography>
             </Grid>
             <Typography variant="body1">{content}</Typography>
+            <Typography variant="body1">{linkAnchor}</Typography>
           </Grid>
         );
       })}

@@ -45,7 +45,7 @@ export const contactInfo = {
   },
   email: {
     title: 'Email',
-    value: 'vivek.chanddru@gmail.com'
+    value: 'chanddruvivek@gmail.com'
   }
 };
 
@@ -304,20 +304,31 @@ export const volunteerInfo = {
 
 
 export const talksInfo = {
-  title: 'Public Speaking',
+  title: 'Presentations',
   subtitle: 'Times I went on stage',
   talks: [
     {
-      title: 'droidcon SF 2018',
-      content: 'Teaching Kotlin to Play well with Java'
+      title: 'droidcon San Francisco 2019',
+      linkAnchor: <a style={styles.links} href="https://www.droidcon.com/2019/11/15/navigating-android-like-a-pro">Video</a>,
+      content: 'Navigating Android like a Pro',
+      description: 'This session offered a practical guide to Jetpack Navigation, addressing common challenges and showcasing its latest features. Drawing on personal experience, the talk explored how to effectively implement Navigation in existing and new projects, including designing single-activity apps and leveraging nested graphs. Attendees gained the knowledge and confidence to embrace fragments and navigate their apps with proficiency using the latest advancements in Jetpack Navigation.'
+    },
+    {
+      title: 'droidcon San Francisco 2018',
+      linkAnchor: <a style={styles.links} href="https://www.youtube.com/watch?v=1fA7-0hJOjk">Video</a>,
+      content: 'Teaching Kotlin to Play well with Java',
+      description: 'This talk explored the challenges faced by mixed Java-Kotlin development teams and offered practical solutions for Kotlin developers. It provided actionable insights on how to write Kotlin code that seamlessly integrates with existing Java codebases, optimizing performance and easing the transition for Java developers adopting Kotlin. The talk covered specific techniques and best practices to ensure efficient and effective collaboration in a mixed-language environment.'
     },
     {
       title: 'droidcon Vienna 2018',
-      content: 'Teaching Kotlin to Play well with Java'
+      content: 'Dear Kotliners, Java developers are humans too',
+      description: 'A talk on bridging the gap between Java and Kotlin in Android development. It provided Kotlin developers with practical tips and techniques to ensure seamless interoperability with Java codebases, facilitating smoother collaboration and a more efficient transition for teams adopting Kotlin.'
     },
     {
-      title: 'droidcon SF 2019',
-      content: 'Navigating Android like a Pro'
-    },
+      title: 'Research Publication - IJEDR 2015',
+      linkAnchor: <a style={styles.links} href="https://rjwave.org/ijedr/viewpaperforall.php?paper=IJEDR1501085">Journal</a>,
+      content: 'Machine Learning Concept Using K-NN Algorithm for Heart Disease Discovery and Drug Prescription',
+      description: 'A proposal employing machine learning, specifically the K-Nearest Neighbors (K-NN) algorithm, to analyze patient health data and predict the likelihood of heart disease. By utilizing a series of questions and incorporating the K-NN model\'s analysis, the system would provide a diagnosis. Furthermore, it leverages Evidence-Based Medicine (EBM) to recommend the best-known treatment options based on the latest research findings and clinical expertise. This journal proposes a system which aims to bridge the gap between research and practice, ensuring that patients receive the most effective care by combining the power of machine learning with the rigor of EBM.'
+    }
   ]
 };
