@@ -12,7 +12,6 @@ import AvatarLogo from '../../assets/avatar.jpg';
 import {
   myInfo,
   contactInfo,
-  socialLinksInfo,
   aboutMeInfo,
   skillInfo,
   experienceInfo,
