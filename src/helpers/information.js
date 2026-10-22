@@ -17,7 +17,7 @@ const styles = {
 export const myInfo = {
   firstName: 'Vivek',
   lastName: 'Chanddru',
-  role: 'Senior Software Development Engineer'
+  role: 'Senior Staff Engineer - Mobile'
 };
 
 export const contactInfo = {
@@ -40,8 +40,8 @@ export const contactInfo = {
   },
   blog: {
     title: 'Blog',
-    value: 'https://vivekc.xyz',
-    displayName: 'vivekc.xyz'
+    value: 'https://medium.com/adventurous-android',
+    displayName: 'Adventurous Android'
   },
   email: {
     title: 'Email',
@@ -60,105 +60,56 @@ export const aboutMeInfo = {
   subtitle: 'Just a little bit',
   content: (
     <>
-      {'Highly accomplished Senior Software Development Engineer with 10 years of experience in Android, iOS, React Native development. Proven track record \
-      of building and leading teams, delivering high-quality applications, and improving developer velocity. Expertise in Kotlin, Java, Swift, React Native and mobile-first architecture. \
-      Passionate about building scalable, efficient, and user-friendly mobile experiences and contributing back to the developer community through public speaking and event organization.'}
+      {'Strategic Mobile Leader with over a decade of experience leading teams and setting technical vision for mobile applications serving tens of millions of users. Proven track record of leading large-scale cross-functional initiatives, delivering high-quality applications, and improving developer velocity. Expertise in designing performant and secure mobile applications and SDKs, Agentic development, cross-platform development and mentorship.'}
     </>
   )
-};
-
-export const skillInfo = {
-  title: 'Core Competence',
-  subtitle: 'Somethings that I can do',
-  skills: [
-    {
-      title: 'Android',
-      value: 95
-    },
-    {
-      title: 'Kotlin',
-      value: 95
-    },
-    {
-      title: 'Java',
-      value: 95
-    },
-    {
-      title: 'Web',
-      value: 80
-    },
-    {
-      title: 'CI/CD',
-      value: 75
-    },
-    {
-      title: 'iOS',
-      value: 80
-    },
-    {
-      title: 'React Native',
-      value: 80
-    }
-  ]
 };
 
 export const techInfo = {
   title: 'Skills',
   subtitle: 'Sample of what I know',
   techs: [
-    "Android Jetpack", "Compose", "Kotlin Multiplatform", "Retrofit",
-    "Coroutines", "Reactive Programming", "WebRTC",
-    "Functional Programming", "VCS", "Kotlin Multiplatform",
-    "Glide", "Picasso", "SDK Development", "Google Services",
-    "Mobile Security", "Team Management", "Event Management"
+    "Android", "iOS", "Kotlin", "Java", "Swift", "React Native", "Kotlin Multiplatform",
+    "Android Jetpack", "Compose", "WebRTC", "Coroutines",
+    "SDK Development", "Mobile Security"
   ]
 };
 
-/*
-Current/Updated Resume: A detailed current/updated resume indicating:  
-Name and address of employers (not the client site if you were a contractor). 
-Dates of employment (mm/dd/yyyy format). Detailed job description including a list of all responsibilities, 
-specific projects on which you worked, and particular accomplishments you achieved. Post secondary education
- including dates of completion and degrees received. Please place particular emphasis on those aspects of your background 
- which especially qualify you to accept the planned U.S. assignment.
-*/
 export const experienceInfo = {
   title: 'Experience',
   subtitle: 'Places where I grew and helped grow',
   experiences: [
     {
-      title: 'Amazon',
-      subtitle: 'Sr. Software Development Engineer',
-      caption: 'Seattle, WA, USA',
-      duration: '08/31/2020 - present',
+      title: 'PayPal / Venmo',
+      subtitle: 'Senior Staff Software Development Engineer',
+      caption: 'Seattle, WA',
+      duration: '03/2026 – Present',
       content: (
         <>
-          {'Currently working as Senior Software Development Engineer for '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>{'. '}
           <ul>
-            <li>Lead cross-functional teams of Android, iOS, and React Native engineers to enhance the cross-platform infrastructure for <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>.</li>
-            <li>Spearhead initiatives to resolve bottlenecks and optimize developer velocity by 60%, by creating shared frameworks and improving build infrastructure.</li>
-            <li>Collaborate with product managers, designers, and backend developers to define and implement architectural designs.</li>
-            <li>Design and develop scalable and performant mobile applications using Kotlin, Java, Swift, and TypeScript.</li>
-            <li>Mentor other developers, facilitate agile development, conduct code reviews, and enforce coding and design standards across the organization.</li>
-            <li>Implement best practices for memory management, performance optimization, and network communication.</li>
-            <li>Create automation and workflows to monitor operational performance of the application.</li>
-            <li>Drive processes using Amazon’s internal tools like the Brazil build system and Pipelines for CI/CD.</li>
-            <li>Led the recruitment process for mobile developers, identifying and onboarding top talent.</li>
+            <li>Lead mobile architecture for <b>Pay with Venmo</b> and <b>Venmo Commerce</b>, ensuring robust, scalable technical foundations for an organization of 100 engineers across 6 teams.</li>
+            <li>Automate complex investigation workflows by leveraging Claude to create sharable contexts and skills, equipped with deep codebase knowledge and capabilities to query the BigQuery schema via MCP, <b>reducing time to RCA issues by 30%</b>.</li>
+            <li>Successfully <b>increased</b> the PwV <b>conversion rate by 2%</b> within the first 3 months by identifying drop-offs and implementing targeted technical optimizations.</li>
+            <li>Mentor Technical Leads across the Commerce organization and established a weekly leads sync to facilitate knowledge sharing, raise the bar on code quality, and standardize architectural patterns.</li>
+            <li>Serve as a core member of the Mobile Leadership group, taking responsibility for the overall code quality of the Venmo mobile application and spearheading AI adoption strategies across the engineering lifecycle.</li>
           </ul>
         </>
-      ),
-      shortContent: (
+      )
+    },
+    {
+      title: 'Amazon',
+      subtitle: 'Senior Software Development Engineer',
+      caption: 'Seattle, WA',
+      duration: '08/2020 – 03/2026',
+      content: (
         <>
           <ul>
-            <li>Lead cross-functional teams of Android, iOS, and React Native engineers to enhance the cross-platform infrastructure for <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos">Amazon Photos</a>.</li>
-            <li>Spearhead initiatives to resolve bottlenecks and optimize developer velocity by 60%, by creating shared frameworks and improving build infrastructure.</li>
-            <li>Collaborate with product managers, designers, and backend developers to define and implement architectural designs.</li>
-            <li>Design and develop scalable and performant mobile applications using Kotlin, Java, Swift, and TypeScript.</li>
-            <li>Mentor other developers, facilitate agile development, conduct code reviews, and enforce coding and design standards across the organization.</li>
-            <li>Implement best practices for memory management, performance optimization, and network communication.</li>
-            <li>Create automation and workflows to monitor operational performance of the application.</li>
-            <li>Drive processes using Amazon’s internal tools like the Brazil build system and Pipelines for CI/CD.</li>
-            <li>Led the recruitment process for mobile developers, identifying and onboarding top talent.</li>
+            <li>Set the technical vision and direction for the <b>30+ person mobile engineering organization</b> (Android, iOS, React Native) at <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos&pli=1">Amazon Photos</a>, actively mentoring senior engineers.</li>
+            <li>Influenced the <b>engineering roadmap for a 300+ person org</b> as a designated <b>technical 'bar raiser,</b>' partnering with Director, VP, and SVP-level leadership to deliver strategic goals.</li>
+            <li>Led the architectural modernization of the <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.amazon.clouddrive.photos&pli=1">Amazon Photos</a> Android app, rewriting a decade-old codebase into a scalable multi-module architecture, resulting in a <b>50% crash rate reduction</b>.</li>
+            <li>Spearheaded a critical cross-platform infrastructure initiative, <b>securing director-level buy-in</b>. Led the new team to <b>improve developer velocity by ~60%</b>, reduce build times by 30%, and cut release-related issues by 40%.</li>
+            <li>Architected revenue-critical features using React Native, solving complex performance bottlenecks and ensuring eventual consistency for in-app purchases, <b>increasing mobile plan sales by ~10%</b>.</li>
+            <li>Pioneered the integration of a <b>conversational GenAI</b> feature on Alexa+, allowing users to launch photo slideshows via voice commands by converging LLM inference with the Model Context Protocol (MCP).</li>
           </ul>
         </>
       )
@@ -166,32 +117,13 @@ export const experienceInfo = {
     {
       title: 'Freshworks Studio Inc. (Now EY Studios)',
       subtitle: 'Android Developer III',
-      caption: 'Victoria, BC, Canada',
-      duration: '02/01/2019 - 08/30/2020',
+      caption: 'Victoria, BC',
+      duration: '02/2019 – 08/2020',
       content: (
         <>
-          {'Delivered mobile solutions for clients ranging from government agencies to private enterprises.'}
           <ul>
-            <li>Led the Android and iOS development and release of the <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a> mobile app.</li>
-            <li>Advocated and successfully delivered Kotlin Multiplatform as a viable cross-platform technology choice for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.wearebcfs.students">BCFS Deals</a> app to share common business logic between iOS and Android apps.</li>
-            <li>Conducted business analysis and formulated technology roadmaps tailored to client needs.</li>
-            <li>Designed and implemented prototypes, data flow diagrams, and system models.</li>
-            <li>Mentored team members to support their professional growth and career advancement.</li>
-            <li>Combined technical and leadership roles to ensure successful project delivery.</li>
-          </ul>
-        </>
-      ),
-      shortContent: (
-        <>
-          <ul>
-            <li>Delivered mobile solutions for clients ranging from government agencies to private enterprises.</li>
-            <li>Led the Android and iOS development and release of the <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a> mobile app.</li>
-            <li>Advocated and successfully delivered Kotlin Multiplatform as a viable cross-platform technology choice for <a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.wearebcfs.students">BCFS Deals</a> app to share common business logic between iOS and Android apps.</li>
-            <li>Integrated Google Play Billing to enable subscriptions on <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.sailingplan.sailingplan">SailingPlan</a> Android application, increasing revenue by 40%.</li>
-            <li>Conducted business analysis and formulated technology roadmaps tailored to client needs.</li>
-            <li>Created detailed technical design documents with data flow diagrams, system models and prototypes.</li>
-            <li>Mentored team members to support their professional growth and career advancement.</li>
-            <li>Combined technical and leadership roles to ensure successful project delivery.</li>
+            <li>Architected the mobile infrastructure (Android/iOS) for <b>North America's first remote video identity verification system</b> (<a style={styles.links} href="https://play.google.com/store/apps/details?id=ca.bc.gov.id.servicescard">BC Services Card</a>), securing sensitive government data for over 2 million residents.</li>
+            <li>Championed the <b>adoption of Kotlin Multiplatform</b>, securing C-suite approval (CEO, CTO) to standardize cross-platform architecture and <b>influence technical direction</b> across all new client projects.</li>
           </ul>
         </>
       )
@@ -200,31 +132,12 @@ export const experienceInfo = {
       title: 'Zoho Corporation Pvt. Ltd.',
       subtitle: 'Member Technical Staff',
       caption: 'Chennai, TN, India',
-      duration: '05/11/2015 - 01/18/2019',
+      duration: '05/2015 – 01/2019',
       content: (
         <>
-          {'Led the team of five engineers developing '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>{', '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a>{' and '}<a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a>{' mobile apps, fostering collaboration and innovation'}
           <ul>
-            <li>Led the team of five engineers developing <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>, <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a> and <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> mobile apps, fostering collaboration and innovation.</li>
-            <li>Designed user interfaces, data models, and workflows for mobile applications.</li>
-            <li>Authored and maintained multi-module Java/Kotlin codebase for Android apps.</li>
-            <li>Created an SDK to abstract native WebRTC framework, to be used across Zoho Workplace applications.</li>
-            <li>Created an SDK to facilitate Remote Mobile Sharing functionality from Android device and shared it with enterprise customers to integrate within their applications.</li>
-            <li>Proactively launched and facilitated monthly knowledge-sharing sessions to educate the team on cutting-edge mobile technologies and promote best practices.</li>
-            <li>Published applications to app stores and managed their lifecycle.</li>
-          </ul>
-        </>
-      ),
-      shortContent: (
-        <>
-        <ul>
-            <li>Led the team of five engineers developing <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a>, <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist.agent">Zoho Assist - Customer app</a> and <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> mobile apps, fostering collaboration and innovation.</li>
-            <li>Designed user interfaces, data models, and workflows for mobile applications.</li>
-            <li>Authored and maintained multi-module Java/Kotlin codebase for Android apps.</li>
-            <li>Created an SDK to abstract native WebRTC framework, to be used across Zoho Workplace applications.</li>
-            <li>Created an SDK to facilitate Remote Mobile Sharing functionality from Android device and shared it with enterprise customers to integrate within their applications.</li>
-            <li>Proactively launched and facilitated monthly knowledge-sharing sessions to educate the team on cutting-edge mobile technologies and promote best practices.</li>
-            <li>Published applications to app stores and managed their lifecycle.</li>
+            <li>Architected the flagship <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.assist">Zoho Assist</a> and <a style={styles.links} href="https://play.google.com/store/apps/details?id=com.zoho.meeting">Zoho Meeting</a> applications from scratch, leading a 5-engineer team and designing custom low-latency algorithms for remote screen scaling.</li>
+            <li>Drove the mobile real-time communication strategy by delivering a foundational WebRTC SDK, handling low-level video/audio encoding to eliminate duplicated engineering effort across multiple high-traffic Zoho applications.</li>
           </ul>
         </>
       )
@@ -237,26 +150,14 @@ export const educationInfo = {
   subtitle: 'Where it all began',
   educations: [
     {
-      title: 'R.M.K. Engineering College',
-      subtitle: 'Bachelor of Engineering - CS',
+      title: 'R.M.K. Engineering College (Anna University)',
+      subtitle: 'Bachelor of Engineering in Computer Science',
       caption: 'Chennai, TN, India',
-      duration: '08/01/2011 - 05/31/2015',
+      duration: '08/2011 - 05/2015',
       content: (
         <>
-          {`Completed Bachelors degree from Anna University affliated college.`}
           <ul>
-            <li>Secured 8.94/10 CGPA and came out as a college topper.</li>
-            <li>Secured 14th rank among all CS graduates from the University.</li>
-            <li>Was elected President of CS department and conducted various inter college events.</li>
-          </ul>
-        </>
-      ),
-      shortContent: (
-        <>
-          {`Completed Bachelors degree from Anna University, Chennai, India affliated college.`}
-          <ul>
-            <li>8.94/10 CGPA, ranking in top 15 in the University.</li>
-            <li>Was elected President of CS department and conducted various inter college events.</li>
+            <li>CGPA: 8.94/10, Ranked 14th out of 19,000+ university students</li>
           </ul>
         </>
       )
@@ -264,71 +165,51 @@ export const educationInfo = {
   ]
 };
 
-export const awardInfo = {
-  title: 'Certifications',
-  subtitle: 'To prove I know a few things',
-  awards: [
+export const researchInfo = {
+  title: 'Patents & Authored Works',
+  subtitle: 'Innovative contributions',
+  items: [
     {
-      title: 'Associate Android Developer',
-      content: 'Google | 2018'
+      title: 'Pending Patent',
+      duration: '2026',
+      content: (
+        <>System and Method for Real-Time Multimodal Cognitive State Synchronization for Adaptive Computing – <a style={styles.links} href="https://patents.google.com/patent/CA3277979A1/">CA3277979A1</a></>
+      )
     },
     {
-      title: 'Business English Certification',
-      content: 'University of Cambridge | 2013'
+      title: 'Technical Author',
+      duration: '2016-Present',
+      content: (
+        <>Authored a widely-cited series of articles on <a style={styles.links} href="https://medium.com/adventurous-android/getting-started-with-webrtc-for-android-daab1e268ff4">WebRTC for Android</a>, contributing to the community's knowledge base with over 300,000 lifetime views.</>
+      )
     },
     {
-      title: 'Rational Application Developer',
-      content: 'IBM | 2013'
-    },
+      title: 'Research Publications',
+      duration: '2015-Present',
+      content: (
+        <>Authored and published <a style={styles.links} href="https://www.researchgate.net/profile/Vivek-Chanddru">7 research papers</a> across international journals related to mobile application optimization and innovations.</>
+      )
+    }
   ]
 };
 
-export const volunteerInfo = {
-  title: 'Event Planning',
-  subtitle: 'Love for Android even after work',
-  events: [
+export const communityInfo = {
+  title: 'Public Speaking & Community',
+  subtitle: 'Sharing the knowledge',
+  items: [
     {
-      title: 'droidcon India',
-      content: 'Program Head'
+      title: 'International Speaker',
+      duration: '2018 - Present',
+      content: (
+        <>{`Addressed audiences on Kotlin-Java interoperability and Jetpack Navigation at droidcon San Francisco (2018, 2019) and droidcon Vienna (2018).`}</>
+      )
     },
     {
-      title: 'GDG Vancouver',
-      content: 'Organizer'
-    },
-    {
-      title: 'droidcon London 2017',
-      content: 'Volunteer'
-    },
-  ]
-};
-
-
-export const talksInfo = {
-  title: 'Presentations',
-  subtitle: 'Times I went on stage',
-  talks: [
-    {
-      title: 'droidcon San Francisco 2019',
-      linkAnchor: <a style={styles.links} href="https://www.droidcon.com/2019/11/15/navigating-android-like-a-pro">Video</a>,
-      content: 'Navigating Android like a Pro',
-      description: 'This session offered a practical guide to Jetpack Navigation, addressing common challenges and showcasing its latest features. Drawing on personal experience, the talk explored how to effectively implement Navigation in existing and new projects, including designing single-activity apps and leveraging nested graphs. Attendees gained the knowledge and confidence to embrace fragments and navigate their apps with proficiency using the latest advancements in Jetpack Navigation.'
-    },
-    {
-      title: 'droidcon San Francisco 2018',
-      linkAnchor: <a style={styles.links} href="https://www.youtube.com/watch?v=1fA7-0hJOjk">Video</a>,
-      content: 'Teaching Kotlin to Play well with Java',
-      description: 'This talk explored the challenges faced by mixed Java-Kotlin development teams and offered practical solutions for Kotlin developers. It provided actionable insights on how to write Kotlin code that seamlessly integrates with existing Java codebases, optimizing performance and easing the transition for Java developers adopting Kotlin. The talk covered specific techniques and best practices to ensure efficient and effective collaboration in a mixed-language environment.'
-    },
-    {
-      title: 'droidcon Vienna 2018',
-      content: 'Dear Kotliners, Java developers are humans too',
-      description: 'A talk on bridging the gap between Java and Kotlin in Android development. It provided Kotlin developers with practical tips and techniques to ensure seamless interoperability with Java codebases, facilitating smoother collaboration and a more efficient transition for teams adopting Kotlin.'
-    },
-    {
-      title: 'Research Publication - IJEDR 2015',
-      linkAnchor: <a style={styles.links} href="https://rjwave.org/ijedr/viewpaperforall.php?paper=IJEDR1501085">Journal</a>,
-      content: 'Machine Learning Concept Using K-NN Algorithm for Heart Disease Discovery and Drug Prescription',
-      description: 'A proposal employing machine learning, specifically the K-Nearest Neighbors (K-NN) algorithm, to analyze patient health data and predict the likelihood of heart disease. By utilizing a series of questions and incorporating the K-NN model\'s analysis, the system would provide a diagnosis. Furthermore, it leverages Evidence-Based Medicine (EBM) to recommend the best-known treatment options based on the latest research findings and clinical expertise. This journal proposes a system which aims to bridge the gap between research and practice, ensuring that patients receive the most effective care by combining the power of machine learning with the rigor of EBM.'
+      title: 'Community Organizer',
+      duration: '2017 - Present',
+      content: (
+        <>{`Program Head for droidcon India (2019, 500+ attendees), Program Committee - droidcon India (2025, 2026)`}</>
+      )
     }
   ]
 };

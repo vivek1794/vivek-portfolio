@@ -13,13 +13,11 @@ import {
   myInfo,
   contactInfo,
   aboutMeInfo,
-  skillInfo,
   experienceInfo,
   educationInfo,
-  awardInfo,
   techInfo,
-  talksInfo,
-  volunteerInfo
+  communityInfo,
+  researchInfo
 } from '../../helpers/information';
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   contentContainer: {
-    borderTop: `1px solid ${theme.palette.background.light}`
+    borderTop: `1px solid ${theme.palette.background.light}`,
   },
   aboutContainer: {
     borderRight: `1px solid ${theme.palette.background.light}`,
@@ -44,6 +42,10 @@ const useStyles = makeStyles(theme => ({
   },
   personalSummaryBlob: {
     marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(2),
+    backgroundColor: "#f8fcfa", 
+    padding: theme.spacing(2), 
+    borderLeft: `2px solid ${theme.palette.green.main}`,
   },
   infoContainer: {
     padding: theme.spacing(2)
@@ -70,8 +72,17 @@ const useStyles = makeStyles(theme => ({
     fontSize: '12px'
   },
   sectionTitle: {
-    color: theme.palette.green.main
+    color: theme.palette.green.main,
+    marginTop: '8px',
+  },
+  inlineHeading: {
+    display: "inline",
+    color: theme.palette.text.main,
+  },
+  heading: {
+    color: theme.palette.text.main,
   }
+
 }));
 
 const PrintPage = () => {
@@ -80,27 +91,18 @@ const PrintPage = () => {
   const { firstName, lastName, role } = myInfo;
   const { content } = aboutMeInfo;
   const { location, phone, website, email } = contactInfo;
-  const { skills } = skillInfo;
   const { techs } = techInfo;
   const { experiences } = experienceInfo;
   const { educations } = educationInfo;
-  const { awards } = awardInfo;
-  const { talks } = talksInfo;
-  const { events } = volunteerInfo;
+  const { items: communityItems } = communityInfo;
+  const { items: researchItems } = researchInfo;
 
   return (
     <Grid container className={classes.container}>
 
-
       {/* Header */}
       <Grid item container className={classes.section}>
         <Grid item container direction="row">
-          <Grid item justify='space-between' xs={2}>
-            <Avatar
-            src={AvatarLogo}
-            className={classes.avatarIcon}
-            />
-          </Grid>
           <Grid item>
             <Typography variant="h2"><span className={classNames(classes.noSpace, classes.sectionTitle)}>{firstName}</span> {lastName}</Typography>
             <Typography variant="h3">{role}</Typography>
@@ -118,7 +120,7 @@ const PrintPage = () => {
           <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Experiences</Typography>
           <Grid item container direction="column" className={classes.section}>
             {experiences.map(experience => {
-              const { title, subtitle, caption, duration, shortContent } = experience;
+              const { title, subtitle, caption, duration, content } = experience;
 
               return (
                 <Grid item key={title} className={classes.section}>
@@ -127,7 +129,7 @@ const PrintPage = () => {
                     <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{duration}</Typography>
                   </Grid>
                   <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{caption}</Typography>
-                  <Typography variant="body1">{shortContent}</Typography>
+                  <Typography variant="body1">{content}</Typography>
                 </Grid>
               );
             })}
@@ -141,7 +143,7 @@ const PrintPage = () => {
           <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Education</Typography>
           <Grid item container direction="column" className={classes.section}>
             {educations.map(education => {
-              const { title, subtitle, caption, duration, shortContent } = education;
+              const { title, subtitle, caption, duration, content } = education;
 
               return (
                 <Grid item key={title} className={classes.section}>
@@ -150,7 +152,7 @@ const PrintPage = () => {
                     <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{duration}</Typography>
                   </Grid>
                   <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{title}, {caption}</Typography>
-                  <Typography variant="body1">{shortContent}</Typography>
+                  <Typography variant="body1">{content}</Typography>
                 </Grid>
               );
             })}
@@ -158,62 +160,53 @@ const PrintPage = () => {
         </Grid>
       </Grid>
 
-      {/* Community */}
+      {/* Patents & Authored Works */}
       <Grid item container className={classes.contentContainer}>
-        <Grid item className={classes.section} xs={4} direction="column">
-          <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Public Speaking</Typography>
-          {talks.map(talk => {
+        <Grid item className={classes.section} direction="column">
+          <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>{researchInfo.title}</Typography>
+          <ul>
+          {researchItems.map(item => {
             return (
-              <Grid item key={talk.title} className={classes.section}>
-                <Typography variant="h5">{talk.title}</Typography>
-                <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{talk.content}</Typography>
-              </Grid>
+              <li key={item.title}>
+                <Grid item className={classes.section}>
+                  <Typography variant="h4" className={classNames(classes.noSpace, classes.inlineHeading)}>{item.title}: </Typography>
+                  <Typography variant="body1" className={classes.inlineHeading}>{item.content}</Typography>
+                </Grid>
+              </li>
             );
           })}
-        </Grid>
-
-        <Grid item className={classes.section} xs={4}>
-          <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Events Organized</Typography>
-          {events.map(event => {
-            return (
-              <Grid item key={event.title} className={classes.section}>
-                <Typography variant="h5">{event.title}</Typography>
-                <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{event.content}</Typography>
-              </Grid>
-            );
-          })}
-        </Grid>
-
-        <Grid item className={classes.section} xs={4}>
-          <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Certifications</Typography>
-          {awards.map(award => {
-            const { title, content } = award;
-            return (
-              <Grid item key={title} className={classes.section}>
-                <Typography variant="h5">{title}</Typography>
-                <Typography variant="h6" className={classNames(classes.noSpace, classes.h6text)}>{content}</Typography>
-              </Grid>
-            );
-          })}
+          </ul>
         </Grid>
       </Grid>
 
+      {/* Public Speaking & Community */}
+      <Grid item container className={classes.contentContainer}>
+        <Grid item className={classes.section} direction="column">
+          <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Public Speaking & Community Leadership</Typography>
+          <ul>
+          {communityItems.map(item => {
+            return (
+              <li key={item.title}>
+                <Grid item className={classes.section}>
+                  <Typography variant="h4" className={classNames(classes.noSpace, classes.inlineHeading)}>{item.title} </Typography>
+                  <Typography variant="body1" className={classes.inlineHeading}>{item.content}</Typography>
+                </Grid>
+              </li>
+            );
+          })}
+          </ul>
+        </Grid>
+      </Grid>
 
       {/* Skills */}
       <Grid item container className={classes.contentContainer}>
         <Grid item className={classes.section}>
           <Typography variant="h3" className={classNames(classes.noSpace, classes.sectionTitle)}>Skills</Typography>
-          {skills.map(skill => (
-            <Chip key={skill.title} classes={{ root: classes.chip }} label={skill.title} variant="outlined" />
-          ))}
           {techs.map(tech => (
             <Chip key={tech} classes={{ root: classes.chip }} label={tech} variant="outlined" />
           ))}
         </Grid>
-
-
       </Grid>
-
 
     </Grid>
   );
